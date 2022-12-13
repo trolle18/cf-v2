@@ -6,7 +6,7 @@ const nextConfig = {
     domains: ['carlsbergfondet.dk', 'carlsbergfondet', 'https://carlsbergfondet.dk'],
     // loader: "akamai",
     // path: "",
-  },
+  }, 
 }
 
 module.exports = nextConfig
