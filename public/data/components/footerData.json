@@ -1,0 +1,162 @@
+[
+    {
+      "id": 3373,
+      "online": "y",
+      "title": "footer",
+      "logoLink": [
+        {
+          "id": 132,
+          "text": "Logo link",
+          "url": "/",
+          "src": "/data/media/logo/CF_logo_DK_WHITE.svg",
+          "alt": "Carlsbergfondet logo",
+          "svg": [
+            {
+              "id": 222,
+              "src": "/data/media/logo/CF_logo_DK_BLACK.svg",
+              "alt": "Carlsbergfondet logo"
+            }
+          ]
+        }
+      ],
+      "navLinks": [
+        {
+          "id": 1840,
+          "headline": "Om fondet",
+          "url": "/",
+          "links": [
+            {
+              "id": 1841,
+              "text": "Carlsbergfondet",
+              "url": "/"
+            },
+            {
+              "id": 1842,
+              "text": "Passion for perfektion",
+              "url": "/"
+            },
+            {
+              "id": 1843,
+              "text": "Hvem er vi",
+              "url": "/"
+            }
+          ]
+        },
+        {
+          "id": 1910,
+          "headline": "Familien",
+          "url": "/",
+          "links": [
+            {
+              "id": 1811,
+              "text": "Glyptoteket",
+              "url": "/"
+            },
+            {
+              "id": 1812,
+              "text": "Frederiksborg Museum",
+              "url": "/"
+            },
+            {
+              "id": 1813,
+              "text": "Ny Carlsbergfondet",
+              "url": "/"
+            },
+            {
+              "id": 1814,
+              "text": "Carlsberg Laboratorium",
+              "url": "/"
+            },
+            {
+              "id": 1815,
+              "text": "Tuborgfondet",
+              "url": "/"
+            },
+            {
+              "id": 1816,
+              "text": "Carlsberg Group",
+              "url": "/"
+            }
+          ]
+        },
+        {
+          "id": 1880,
+          "headline": "Ansøg",
+          "url": "/",
+          "links": [
+            {
+              "id": 1881,
+              "text": "Carlsbergfondet",
+              "url": "/"
+            },
+            {
+              "id": 1882,
+              "text": "Passion for perfektion",
+              "url": "/"
+            },
+            {
+              "id": 1883,
+              "text": "Hvem er vi",
+              "url": "/"
+            }
+          ]
+        }
+      ],
+      "contactInfo": [
+        {
+          "id": 555,
+          "text": "H.C. Andersens Boulevard 35",
+          "subtext": "1553 København V",
+          "url": "/"
+        },
+        {
+          "id": 337,
+          "text": "+45 33 43 53 63",
+          "url": "/"
+        },
+        {
+          "id": 8832,
+          "text": "info@carlsbergfondet.dk",
+          "url": "/"
+        }
+      ],
+      "btmLinks": [
+        {
+          "id": 26,
+          "text": "Find vej til fondet",
+          "url": "/"
+        },
+        {
+          "id": 27,
+          "text": "Find en medarbejder",
+          "url": "/"
+        }
+      ],
+      "someLinks": [
+        {
+          "id": 55,
+          "text": "Instagram",
+          "altText": "IG",
+          "url": "/"
+        },
+        {
+          "id": 67,
+          "text": "Facebook",
+          "altText": "FB",
+          "url": "/"
+        },
+        {
+          "id": 43,
+          "text": "Youtube",
+          "altText": "YT",
+          "url": "/"
+        },
+        {
+          "id": 97,
+          "text": "Linkedin",
+          "altText": "LI",
+          "url": "/"
+        }
+      ]
+    }
+  ]
