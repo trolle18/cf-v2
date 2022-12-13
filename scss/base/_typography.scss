@@ -1,0 +1,45 @@
+h1, h2, h3, h4, h5 {
+  font-family: $ff-headline;
+  font-weight: 400;
+}
+
+h1, h2, h3 {
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: $fs_2xl;
+}
+
+h2 {
+  font-size: $fs_2xl;
+}
+
+h3 {
+  font-size: $fs_l;
+}
+
+h4 {
+  font-size: $fs_ml;
+}
+
+h5 {
+  font-size: $fs_m;
+}
+
+p, span {
+  font-size: $fs_m;    
+  font-weight: 500;
+}
+
+.txt-clr-mg {
+  color: $clr_midnight_green;
+}
+
+.txt-clr-lg {
+  color: $clr_light_green;
+}
+
+.txt-clr-lightestg {
+  color: $clr_lightest_green;
+}

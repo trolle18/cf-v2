@@ -1,0 +1,200 @@
+.modal-wrapper {
+  height: 100vh;
+  width: 100vw;
+  z-index: 9999;
+  overflow: hidden;
+  display: block;
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  animation: slideUp .5s ease-in-out forwards;
+
+  .modal-overlay {
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -10;
+  }
+
+  .modal {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    
+    .modal-cntr {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      vertical-align: middle;
+      align-items: center;
+      
+      &__img-cntr {
+        position: absolute;
+        height: 20%;
+        width: 20%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;   
+      }    
+    }
+  }
+}
+
+
+//  MODAL THEMES - BACKGROUND  //
+.modal-wrapper.modal-theme-lightest-green {  // Background: Lightest green
+  .modal {
+    background-color: $clr_lightest_green;
+  }
+}
+
+.modal-wrapper.modal-theme-light-green {  // Background: Light green
+  .modal {
+    background-color: $clr_light_green;
+  }
+}
+
+.modal-wrapper.modal-theme-midnight-green {  // Background: Midnight green
+  .modal {
+    background-color: $clr_midnight_green;
+  }
+}
+
+.modal-wrapper.modal-theme-dark-red {  // Background: Dark red
+  .modal {
+    background-color: $clr_dark-red;
+  }
+}
+
+.modal-wrapper.modal-theme-yellow {  // Background: Yellow
+  .modal {
+    background-color: $clr_yellow;
+  }
+}
+
+.modal-wrapper.modal-theme-light-orange {  // Background: Light Orange
+  .modal {
+    background-color: $clr_light_orange;
+  }
+}
+
+.modal-wrapper.modal-theme-dark-grey {  // Background: Dark grey
+  .modal {
+    background-color: $clr_d_grey;
+  }
+}
+
+.modal-wrapper.modal-theme-white {  // Background: White
+  .modal {
+    background-color: $clr_white;
+  }
+}
+
+
+//  MODAL THEMES - HOPS  //
+.modal-wrapper.modal-hops-light-green {  // Hops: Light green
+  .modal {
+    .modal-cntr {
+      &__img-cntr {
+        background-image: url("../../public/assets/hops/hops-light-green.svg");
+      }    
+    }
+  }
+}
+
+.modal-wrapper.modal-hops-midnight-green {  // Hops: Midnight green
+  .modal {
+    .modal-cntr {
+      &__img-cntr {
+        background-image: url("../../public/assets/hops/hops-midnight-green.svg");
+      }    
+    }
+  }
+}
+
+.modal-wrapper.modal-hops-dark-red {  // Hops: Dark red
+  .modal {
+    .modal-cntr {
+      &__img-cntr {
+        background-image: url("../../public/assets/hops/hops-dark-red.svg");
+      }    
+    }
+  }
+}
+
+.modal-wrapper.modal-hops-yellow {  // Hops: Yellow
+  .modal {
+    .modal-cntr {
+      &__img-cntr {
+        background-image: url("../../public/assets/hops/hops-yellow.svg");
+      }    
+    }
+  }
+}
+
+.modal-wrapper.modal-hops-dark-grey {  // Hops: Dark grey
+  .modal {
+    .modal-cntr {
+      &__img-cntr {
+        background-image: url("../../public/assets/hops/hops-dark-grey.svg");
+      }    
+    }
+  }
+}
+
+.modal-wrapper.modal-hops-white {  // Hops: White
+  .modal {
+    .modal-cntr {
+      &__img-cntr {
+        background-image: url("../../public/assets/hops/hops-white.svg");
+      }    
+    }
+  }
+}
+
+
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0vh);
+  }
+  85% {
+    transform: translateY(0vh);
+  }
+  100% {
+    transform: translateY(-100vh);
+    display: none;
+    z-index: -10;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(0vh);
+  }
+  50% {
+    transform: translateY(0vh);
+  }
+  100% {
+    transform: translateY(100vh);
+    display: none;
+    z-index: -10;
+  }
+}
+
+@keyframes expand {
+  0% {
+    transform: translateX(0vw);
+  } 
+  50% {
+    transform: translateX(0vw);
+  }
+  100% {
+    transform: translateX(-100vw);
+    display: none;
+    z-index: -10;
+  } 
+}

@@ -1,0 +1,234 @@
+.article {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: .2em;
+  bottom: 0;
+
+  .article-img {
+    width: 100%;
+
+    &__img-cntr {
+      height: 260px;
+      width: 100%;
+
+      img {            
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        object-fit: cover;
+      }
+      &__play-btn {
+        height: 2.5em;
+        width: 2.5em;
+        position: absolute;
+        right: 1.25em;
+        bottom: 1.25em;
+        z-index: 999;
+        border: none;
+        border-radius: 100%;
+        background-color: $semitrans_light_grey_90;
+
+          &__icon {
+            height: .6em;
+            width: .6em;
+            margin: auto auto;
+            display: inline-block;
+            background-image: url("data:image/svg+xml,%3Csvg width='10' height='11' viewBox='0 0 10 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.71695 4.68236C9.34404 5.07396 9.34404 5.98714 8.71695 6.37875L1.69922 10.7612C1.03316 11.1771 0.169534 10.6983 0.169534 9.91299L0.169535 1.14811C0.169535 0.362841 1.03316 -0.116029 1.69922 0.299914L8.71695 4.68236Z' fill='%23183428'/%3E%3C/svg%3E%0A");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+          }
+
+          &__text {
+            font-size: $fs_m;
+            display: none;
+          }      
+      }
+    }
+  }
+
+  .article-cnt {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__txt {
+      height: auto;
+      width: auto;
+      padding: .5em 0;
+      display: flex;
+      flex-direction: column;
+      gap: .75em;
+
+      &__details {
+        color: $clr_ml_grey;
+      }
+
+      &__headline {
+        font-size: $fs_ml;
+      }
+
+      span {
+        text-transform: capitalize;
+      }
+
+      .txt-top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    &__btm {
+      width: 100%;
+      display: flex;
+      justify-content: right;
+      bottom: 0;
+    }
+  }   
+}
+
+
+
+
+.article-section {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  column-gap: 2em;
+  row-gap: 2em;
+
+  .article {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0em;
+  
+    .article-img {
+      height: auto;
+      width: 100%;
+      object-fit: cover;
+
+      &__img-cntr {
+        height: 10em;
+        width: 100%;
+        object-fit: cover;
+        overflow: hidden;
+  
+        img {            
+          height: 100%;
+          width: 100%;
+          margin: 0;
+        }
+      }
+    }
+  
+    .article-cnt {
+      border-bottom: solid $clr_ml_grey 1px;
+
+      &__txt {
+        padding: .5em 0 .25em 0;
+        gap: .25em;
+  
+        &__details {
+          color: $clr_m_grey;
+        }
+  
+        &__headline {
+          font-size: $fs_xl;
+        }
+      }
+  
+      &__btm {
+        width: 100%;
+        padding: 0 0 1em 0;
+        display: flex;
+        justify-content: right;
+        bottom: 0;
+      }
+    }      
+  }
+}
+
+
+
+@media (min-width: 425px) {
+  .article-section {
+    .article {
+      .article-img {  
+        &__img-cntr {
+          height: 14em;
+        }
+      }
+    
+      .article-cnt {
+        border-bottom: solid $clr_ml_grey 1px;
+  
+        &__txt {
+          gap: .5em;
+      }       
+      }
+    }
+  }
+}
+
+
+@media (min-width: 600px) {
+  .article-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 2em;
+  
+    .article {
+      height: auto;
+      width: 46%;
+      margin: 0 0;
+    
+      .article-img {  
+        &__img-cntr {
+          height: 12em;
+        }
+      }     
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .article-section {
+    .article {
+      height: auto;
+      max-width: 48%;
+    
+      .article-img {  
+        &__img-cntr {
+          height: 14em;
+        }
+      }     
+    }
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .article-section {
+    .article {
+      height: auto;
+      max-width: 30%;
+    
+      .article-img {  
+        &__img-cntr {
+          height: 14em;
+        }
+      }     
+    }
+  }
+}

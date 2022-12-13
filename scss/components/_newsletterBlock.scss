@@ -1,0 +1,151 @@
+.newsletterBlock {
+  height: auto;
+  width: 100%;
+  margin: 0em 0em 4em 0em;
+
+  &__cntr {
+    height: auto;
+    width: auto;
+    margin: 0em 2em;
+    padding: 2em 1em;    
+    background-color: $clr_l_grey;
+
+    &__inner-cntr {
+      height: auto;
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2em;
+
+      .inputfield {
+        height: auto;
+        width: auto;
+
+        &::after {
+          content: "";
+          display: block;
+          height: 2px;
+          width: auto;
+          background-color: rgba(0,0,0, .2);
+        }
+        
+        input[type="text"] {
+          height: 100%;
+          width: 100%;
+          margin: auto auto;
+          padding: .5em 0em;
+          font-size: $fs_m;
+          color: $clr_midnight_green;
+          border: solid transparent 1px;
+          background-color: transparent;
+          text-indent: .5em;
+          &:focus {
+            border: solid $clr_light_green 1px;
+            outline: $clr_light_green;
+          }
+          &::placeholder {
+            color: $clr_midnight_green;
+          }
+        }
+      }
+
+      &__col-1 {
+        height: auto;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2em;
+
+        &__headline {
+          height: auto;
+          width: auto;
+        } 
+
+        &__text {
+          height: auto;
+          width: auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: .5em;
+
+          p {
+            height: auto;
+            width: auto;
+          }
+        }   
+      }
+
+      &__col-2 {
+        height: auto;
+        width: auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1em;
+        align-items: flex-end;
+
+        .img-cntr {
+          height: 10em;
+          width: 100%;
+          position: relative;
+          overflow: hidden;
+          object-fit: cover;
+          object-position: right;
+         
+          &__inner-cntr {
+            height: auto;
+            width: 100%;
+            right: 0%;
+            top: -25%;
+            object-fit: cover;
+            position: absolute;
+
+            img {
+              height: auto;
+              width: 100%;
+            }
+          }
+        }
+
+        .cta-btn-cntr {
+          margin: 0 0 0 auto;
+          position: relative;
+          bottom: 0;
+        }
+        
+      }
+
+    }
+  } 
+}
+
+
+@media (min-width: 600px) {
+  .newsletterBlock {  
+    &__cntr {  
+      &__inner-cntr {
+        flex-direction: row;
+  
+        .inputfield {
+          width: 100%;
+          margin: auto auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          
+          input[type="text"] {
+            &::placeholder {
+              vertical-align: middle;
+              margin: auto 0;
+            }
+          }
+        }
+      }
+
+    }
+  } 
+}

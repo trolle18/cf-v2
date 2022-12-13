@@ -1,0 +1,199 @@
+
+// CTA BUTTON
+.cta-btn {
+  height: auto;
+  width: auto;
+  margin: auto auto;
+  display: flex;
+  flex-direction: row;
+  border: none;
+  background-color: $clr_lightest_green;
+  font-size: $fs_m;
+  vertical-align: middle;
+  align-items: center;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: $hover_easein-05;
+
+  &__arrow {
+    display: none;
+  }
+
+  &__text {
+    color: $clr_midnight_green;
+    width: 100%;
+  }
+
+  &__svg-cntr {
+    display: none;
+
+    .arrow {
+      display: none;
+      transition: $hover_easein-05;
+    }
+  }
+
+}
+
+.cta-btn-cntr.arrow-top-r {
+  .cta-btn {
+    padding: .5em 2.25em .5em .5em;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: .75em;
+
+    &__svg-cntr {
+      display: block;
+      width: 1em;
+      height: 100%;
+      padding: .5em;
+      border: solid $clr_midnight_green 1px;
+      border-radius: 100%;
+
+      .arrow {
+        display: block;
+        width: .75em;
+        height: .75em;
+        margin: auto auto;
+        background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.4673 1.0552C15.4673 0.50292 15.0195 0.0552043 14.4673 0.0552041L5.46725 0.0552057C4.91497 0.0552054 4.46725 0.502921 4.46725 1.05521C4.46725 1.60749 4.91497 2.05521 5.46725 2.05521L13.4673 2.0552L13.4673 10.0552C13.4673 10.6075 13.915 11.0552 14.4673 11.0552C15.0195 11.0552 15.4673 10.6075 15.4673 10.0552L15.4673 1.0552ZM1.73933 15.1973L15.1744 1.76231L13.7601 0.348098L0.32512 13.7831L1.73933 15.1973Z' fill='%23f2f2f2'/%3E%3C/svg%3E%0A");
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+    }
+  }
+  &:hover {
+    .cta-btn {
+      &__svg-cntr {
+        .arrow {
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+}
+
+// .cta-btn-cntr {
+//   &:hover {
+//     .cta-btn {
+//       &__svg-cntr {
+//         .arrow {
+//           transform: rotate(45deg);
+//         }
+//       }
+//     }
+//   }
+// }
+
+
+// CTA BUTTON - Plain
+.cta-btn-cntr.plain-light-cta {
+  .cta-btn {
+    background-color: transparent;
+    
+    &__text {
+      color: $clr_l_grey;
+    }
+  
+    &__svg-cntr {
+      border: solid $clr_l_grey 1px;
+    }
+  }
+}
+
+// CTA BUTTON - Yellow
+.cta-btn-cntr.ylw-cta {
+  .cta-btn {
+    background-color: $clr_yellow;
+
+    &__svg-cntr {
+      border: solid $clr_midnight_green 1px;
+
+      .arrow {
+        background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.4673 1.0552C15.4673 0.50292 15.0195 0.0552043 14.4673 0.0552041L5.46725 0.0552057C4.91497 0.0552054 4.46725 0.502921 4.46725 1.05521C4.46725 1.60749 4.91497 2.05521 5.46725 2.05521L13.4673 2.0552L13.4673 10.0552C13.4673 10.6075 13.915 11.0552 14.4673 11.0552C15.0195 11.0552 15.4673 10.6075 15.4673 10.0552L15.4673 1.0552ZM1.73933 15.1973L15.1744 1.76231L13.7601 0.348098L0.32512 13.7831L1.73933 15.1973Z' fill='%23183428'/%3E%3C/svg%3E%0A");    
+      }
+    }
+  }
+}
+
+
+// CTA BUTTON - Yellow
+.cta-btn-cntr.midgreen-cta {
+  .cta-btn {
+    background-color: $clr_midnight_green;
+
+    &__text {
+      color: $clr_lightest_green;
+    }
+
+    &__svg-cntr {
+      border: solid $clr_lightest_green 1px;
+
+      .arrow {
+        background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.4673 1.0552C15.4673 0.50292 15.0195 0.0552043 14.4673 0.0552041L5.46725 0.0552057C4.91497 0.0552054 4.46725 0.502921 4.46725 1.05521C4.46725 1.60749 4.91497 2.05521 5.46725 2.05521L13.4673 2.0552L13.4673 10.0552C13.4673 10.6075 13.915 11.0552 14.4673 11.0552C15.0195 11.0552 15.4673 10.6075 15.4673 10.0552L15.4673 1.0552ZM1.73933 15.1973L15.1744 1.76231L13.7601 0.348098L0.32512 13.7831L1.73933 15.1973Z' fill='%23ccf2db'/%3E%3C/svg%3E%0A");    
+      }
+    }
+  }
+}
+
+
+// CTA BUTTON - Light
+.cta-cntr-light {
+  width: max-content;
+
+  .cta-btn {
+    color: $clr_lightest_green;
+    background-color: transparent;
+    border: solid $clr_lightest_green 1px;
+    transition: ease-in .02s;
+
+    &__text {
+      color: $clr_lightest_green;
+      width: 100%;
+    }
+
+    &__svg-cntr {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .cta-btn {
+    width: max-content;
+    padding: 1em 2.25em;
+  }
+}
+
+
+// PLAY BUTTON
+.play-btn {
+  height: 2.5em;
+  width: 2.5em;
+  position: absolute;
+  right: 1.25em;
+  bottom: 1.25em;
+  z-index: 999;
+  border: none;
+  border-radius: 100%;
+  background-color: $semitrans_light_grey_90;
+
+    &__icon {
+      height: .6em;
+      width: .6em;
+      margin: auto auto;
+      display: inline-block;
+      background-image: url("data:image/svg+xml,%3Csvg width='10' height='11' viewBox='0 0 10 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.71695 4.68236C9.34404 5.07396 9.34404 5.98714 8.71695 6.37875L1.69922 10.7612C1.03316 11.1771 0.169534 10.6983 0.169534 9.91299L0.169535 1.14811C0.169535 0.362841 1.03316 -0.116029 1.69922 0.299914L8.71695 4.68236Z' fill='%23183428'/%3E%3C/svg%3E%0A");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &__text {
+      font-size: $fs_m;
+      display: none;
+    }      
+}
+
+

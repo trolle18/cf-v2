@@ -1,0 +1,185 @@
+.swiper-controls-cntr {
+  margin: 0 0 0 auto;
+  padding: 1em 0;
+  display: flex;
+  flex-direction: row;
+
+  right: 0;
+  vertical-align: middle;
+
+  &__title {
+    margin: auto 0;
+    font-size: $fs_s;
+  }
+
+  .swiper-controls {
+    width: max-content;
+    height: auto;
+    margin: 0 0 0 auto;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    gap: 2em;    
+
+    // Swiper pagination styles
+    &__dots {
+      width: 100%;
+      height: 100%;
+    }
+      
+    .swiper-pagination {
+      height: 100%;
+      width: auto;
+      margin: 0 auto;
+      top: 0;
+      text-align: center;
+      align-items: center;
+      transition: 300ms opacity;
+      transform: translate3d(0, 0, 0);
+      z-index: 10;
+    
+      &.swiper-pagination-hidden {
+        opacity: 0;
+      }
+    
+      .swiper-pagination-disabled > &,
+      &.swiper-pagination-disabled {
+        display: none !important;
+      }
+    }
+      
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal {    
+      height: min-content;
+      width: 100%;
+      top: 0px;
+    }
+
+    // Bullets
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      margin: auto 4px;
+      display: inline-block;
+      border-radius: 50%;
+      background: $clr_midnight_green;
+      opacity: .20;
+
+      @at-root button#{&} {
+        border: none;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        appearance: none;
+      }
+
+      .swiper-pagination-clickable & {
+        cursor: pointer;
+      }
+
+      &:only-child {
+        display: none !important;
+      }
+    }    
+
+    .swiper-pagination-bullet-active {
+      opacity:  1;
+      background: $clr_midnight_green;
+    }      
+  }
+}
+
+// Swiper Navigation buttons
+.swiper-button-prev, .swiper-button-next {
+  height: 2em;
+  width: 2em;  
+  top: 0;
+  margin: .5em 0 0 0;
+  padding: .25em;
+  position: absolute;
+  z-index: 999;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $clr_midnight_green;
+  border-radius: 100px;
+  border: solid $clr_midnight_green 1px;
+  transition: $hover_easein-05;
+  
+  &::after {
+    width: auto;
+    height: auto;
+    display: block;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: transparent;        
+  }
+  &:hover {
+    color: $clr_light_green;
+    border: solid $clr_light_green 1px;
+  }
+}
+// Prev
+.swiper-button-prev {
+  left: auto;
+  right: 5em;
+
+  &::after {
+    content: "prev";
+    background-image: url("data:image/svg+xml,%3Csvg  viewBox='0 0 20 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.292893 7.29289C-0.0976311 7.68342 -0.097631 8.31658 0.292893 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928932C7.68054 0.538407 7.04738 0.538407 6.65685 0.928932L0.292893 7.29289ZM1 9L20 9L20 7L1 7L1 9Z' fill='%23183428'/%3E%3C/svg%3E ");
+  }
+  &:hover {
+    &::after {
+      background-image: url("data:image/svg+xml,%3Csvg  viewBox='0 0 20 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.292893 7.29289C-0.0976311 7.68342 -0.097631 8.31658 0.292893 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928932C7.68054 0.538407 7.04738 0.538407 6.65685 0.928932L0.292893 7.29289ZM1 9L20 9L20 7L1 7L1 9Z' fill='%2300bf4d'/%3E%3C/svg%3E ");
+    }
+  }
+}
+// Next 
+.swiper-button-next {
+  left: auto;
+  right: 0;
+  
+  &::after {
+    content: "next";
+    background-image: url("data:image/svg+xml,%3Csvg  viewBox='0 0 21 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 7C0.447715 7 -4.82823e-08 7.44772 0 8C4.82823e-08 8.55228 0.447715 9 1 9L1 7ZM20.7071 8.70711C21.0976 8.31658 21.0976 7.68342 20.7071 7.29289L14.3431 0.928931C13.9526 0.538407 13.3195 0.538407 12.9289 0.928931C12.5384 1.31946 12.5384 1.95262 12.9289 2.34314L18.5858 8L12.9289 13.6569C12.5384 14.0474 12.5384 14.6805 12.9289 15.0711C13.3195 15.4616 13.9526 15.4616 14.3431 15.0711L20.7071 8.70711ZM1 9L20 9L20 7L1 7L1 9Z' fill='%23183428'/%3E%3C/svg%3E ");
+  }
+  &:hover {
+    &::after {
+      background-image: url("data:image/svg+xml,%3Csvg  viewBox='0 0 21 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 7C0.447715 7 -4.82823e-08 7.44772 0 8C4.82823e-08 8.55228 0.447715 9 1 9L1 7ZM20.7071 8.70711C21.0976 8.31658 21.0976 7.68342 20.7071 7.29289L14.3431 0.928931C13.9526 0.538407 13.3195 0.538407 12.9289 0.928931C12.5384 1.31946 12.5384 1.95262 12.9289 2.34314L18.5858 8L12.9289 13.6569C12.5384 14.0474 12.5384 14.6805 12.9289 15.0711C13.3195 15.4616 13.9526 15.4616 14.3431 15.0711L20.7071 8.70711ZM1 9L20 9L20 7L1 7L1 9Z' fill='%2300bf4d'/%3E%3C/svg%3E ");
+    }
+  }
+}
+
+// Navigation buttons disabled
+.swiper-button-disabled {
+  opacity: .5;
+  cursor:default;
+  &:hover {
+    border: solid $clr_midnight_green 1px;
+  }
+}
+.swiper-button-disabled.swiper-button-prev {
+  &:hover {
+    &::after {
+      background-image: url("data:image/svg+xml,%3Csvg  viewBox='0 0 20 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.292893 7.29289C-0.0976311 7.68342 -0.097631 8.31658 0.292893 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928932C7.68054 0.538407 7.04738 0.538407 6.65685 0.928932L0.292893 7.29289ZM1 9L20 9L20 7L1 7L1 9Z' fill='%23183428'/%3E%3C/svg%3E ");
+    }
+  }
+}
+.swiper-button-disabled.swiper-button-next {
+  &:hover {
+    &::after {
+      background-image: url("data:image/svg+xml,%3Csvg  viewBox='0 0 21 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 7C0.447715 7 -4.82823e-08 7.44772 0 8C4.82823e-08 8.55228 0.447715 9 1 9L1 7ZM20.7071 8.70711C21.0976 8.31658 21.0976 7.68342 20.7071 7.29289L14.3431 0.928931C13.9526 0.538407 13.3195 0.538407 12.9289 0.928931C12.5384 1.31946 12.5384 1.95262 12.9289 2.34314L18.5858 8L12.9289 13.6569C12.5384 14.0474 12.5384 14.6805 12.9289 15.0711C13.3195 15.4616 13.9526 15.4616 14.3431 15.0711L20.7071 8.70711ZM1 9L20 9L20 7L1 7L1 9Z' fill='%23183428'/%3E%3C/svg%3E ");
+    }
+  }
+}
+
+// Navigation buttons hidden
+.swiper-button-hidden {
+  display: none;
+}
+.swiper-button-disabled.swiper-button-lock {
+  display: none;
+}

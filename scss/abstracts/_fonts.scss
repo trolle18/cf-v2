@@ -1,0 +1,51 @@
+// Carlsberg Roman - 04 Display
+@font-face {
+  font-family: 'CarlsbergRoman04-Display';
+  src: url('../abstracts/fonts/CarlsbergRoman/CarlsbergRoman04-Display.woff') format('woff'),
+       url('../abstracts/fonts/CarlsbergRoman/CarlsbergRoman04-Display.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+%primary-font {
+  font-family: 'CarlsbergRoman04-Display';
+}
+
+// Carlsberg Roman - 02 Regular
+@font-face {
+  font-family: 'CarlsbergRoman02-Regular';
+  src: url('../abstracts/fonts/CarlsbergRoman/CarlsbergRoman02-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+%seconday-font {
+  font-family: 'CarlsbergRoman02-Regular';
+}
+
+
+// GT America - Regular
+@font-face {
+  font-family: 'GT-America-Standard-Regular-Trial';
+  src: url('../abstracts/fonts/GTAmerica/GT-America-Standard-Regular-Trial.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+%secondary-font {
+  font-family: 'GT-America-Standard-Regular-Trial';
+}
+
+// GT America - Italic
+@font-face {
+  font-family: 'GT-America-Standard-Regular-Italic-Trial';
+  src: url('../abstracts/fonts/GTAmerica/GT-America-Standard-Regular-Italic-Trial.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+}
+
+%secondary-font {
+  font-family: 'GT-America-Standard-Regular-italic-Trial';
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');

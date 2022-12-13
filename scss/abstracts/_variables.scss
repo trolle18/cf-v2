@@ -1,0 +1,56 @@
+// Font-sizes - base: 16px
+$fs_5xl: 3.750rem; // 48px
+$fs_4xl: 3.250rem; // 52px
+$fs_3xl: 2.750rem; // 44px
+$fs_2-3xl: 2.250rem; // 36px
+$fs_2xl: 1.750rem; // 28px
+$fs_xl: 1.375rem; // 22px
+$fs_l: 1.250rem; // 20px
+$fs_ml: 1.125rem; // 18px
+$fs_m: 1.000rem; // 16px
+$fs_s: 0.875rem; // 14px
+$fs_xs: 0.750rem; // 12px
+$fs_2xs: 0.625rem; // 10px
+$fs_3xs: 0.500rem; // 8px
+
+// Font-families
+$ff-headline: 'CarlsbergRoman04-Display';
+$ff-main: 'Nunito', 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+// $ff-main: 'GT-America-Standard-Regular-Trial', 'Public Sans', 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+
+
+// Colors
+$clr_black: #000;
+// $clr_d_grey: #282828;
+$clr_md_grey: #585858;
+$clr_m_grey: #6e6e6e;
+
+$clr_ml_grey: #c7c7c7;
+$clr_d_grey: #c7c7c7;
+$clr_l_grey: #f2f2f2;
+$clr_white: #fff;
+
+$clr_lightest_green: #ccf2db;
+$clr_light_green: #00bf4d;
+$clr_midnight_green: #183428;
+
+$clr_dark_red: #592121;
+$clr_orange: #ffd8c2;
+$clr_light_orange:#ffefe7;
+$clr_yellow: #fff48d;
+
+
+$semitrans_light_grey_70: rgba(242, 242, 242, .7);
+$semitrans_light_grey_90: rgba(242, 242, 242, .9);
+
+$semitrans_lightest_green_80: rgba(204, 242, 219, .8);
+$semitrans_lightest_green_40: rgba(204, 242, 219, .4);
+
+$semitrans_midnight_green_20: rgba(24, 52, 40, .20);
+$semitrans_midnight_green_30: rgba(24, 52, 40, .30);
+$semitrans_midnight_green_70: rgba(24, 52, 40, .70);
+
+$semitrans_dark_grey: rgba(199, 199, 199, .2);
+
+$hover_easein-05: ease-out .08s;
+$hover_easein-02: ease-in .02s;
