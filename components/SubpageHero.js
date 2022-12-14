@@ -25,25 +25,7 @@ export default function SubpageHero({ data }) {
             ) 
         }
         if (isImg) { 
-            // return (
-            //     <div className="hero-cntr__img-cntr">
-            //         {data.img.map((img) => (
-            //             <Image key={img.id} src={img.src} alt={img.alt} height={2000} width={2000} />
-                
-            //         ))}
-            //     </div>
-            // ) 
             const imgSrc = ( data.img.map((img) => (img.src)) )
-            // const imgPos = ( data.img.map((img) => (img.position)) )
-            // if (imgPos == "right") {
-            //     return "right"
-            // } if (imgPos == "left") {
-            //     return "left"
-            // } if (imgPos == "top") {
-            //     return "top"
-            // } if (imgPos == "bottom") { 
-            //     return "bottom"
-            // } else { ( "center" ) }
 
             const imgStyle = {
                 height: "100%",
