@@ -13,7 +13,7 @@ export default function Hero({ data }) {
                 <div className="hero-cntr__video-cntr">
                     {data.video.map((video) => (
                         <video key={video.id}
-                        // autoPlay
+                        autoPlay
                         muted
                         >
                             <source src={video.src}/>
@@ -55,7 +55,7 @@ export default function Hero({ data }) {
     }
 
     // Check theme -> set styletag
-    function checkTheme(data) {
+    function getTheme(data) {
         const theme = data.theme;
 
         if (theme) {
@@ -63,7 +63,7 @@ export default function Hero({ data }) {
         }
     }
     // Check type -> set styletag
-    function checkType(data) {
+    function getType(data) {
         const type = data.type;
 
         if (type === "frontpage") {
@@ -128,7 +128,7 @@ export default function Hero({ data }) {
 
     return (
         <>
-        <section className={`hero-wrapper ${checkTheme(data)} ${checkType(data)}`} >
+        <section className={`hero-wrapper ${getTheme(data)} ${getType(data)}`} >
             <div className="hero" >
                 {getHeroType(data)}
             </div>
