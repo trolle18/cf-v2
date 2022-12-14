@@ -11,12 +11,11 @@ export const applicationpageData = [
     ],
 
 
-
     hero: [
       {
-        
         id: 1904,
         theme: "light",
+        type: "subpage",
         headline: "Ansøgninger og bevillinger",
         text: "",
         // img: [

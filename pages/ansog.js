@@ -6,6 +6,7 @@ import SortArticleSection from '../components/SortArticleSection';
 import SeeMoreCtaLink from '../components/SeeMoreCtaLink';
 import LoadModal from '../components/LoadModal';
 import Nav from '../components/Nav';
+import Hero from '../components/Hero';
 
 
 export default function ApplicationPage() {
@@ -40,7 +41,7 @@ export default function ApplicationPage() {
 
             {data.hero?.map((data) => ( 
               <section className="hero-wrapper subpagehero-wrapper theme-midnight-green" key={data.id} >
-                <SubpageHero data={data}/>
+                <Hero data={data}/>
               </section>
             ))}  
 

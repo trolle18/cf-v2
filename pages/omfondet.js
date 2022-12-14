@@ -9,6 +9,7 @@ import TextFondetsMidler from '../components/TextFondetsMidler';
 import BlockGridSection from '../components/BlockGridSection';
 import LoadModal from '../components/LoadModal';
 import Nav from '../components/Nav';
+import Hero from '../components/Hero';
 
 
 export default function AboutPage() {
@@ -45,7 +46,7 @@ export default function AboutPage() {
 
           {data.hero?.map((data) => ( 
             <section className="hero-wrapper subpagehero-wrapper theme-midnight-green" key={data.id} >
-              <SubpageHero data={data}/>
+              <Hero data={data}/>
             </section>
           ))}  
           

@@ -6,6 +6,7 @@ import LoadModal from '../components/LoadModal';
 import NewsletterBlock from '../components/NewsletterBlock';
 import VideoSection from '../components/VideoSection';
 import Nav from '../components/Nav';
+import Hero from '../components/Hero';
 
 
 export default function NewsPage() {
@@ -34,13 +35,13 @@ export default function NewsPage() {
           {/* ))}   */}
         <main className="page" key={data.id}>
 
-        <section className="modal-wrapper modal-theme-light-orange modal-hops-light-green">
+          <section className="modal-wrapper modal-theme-light-orange modal-hops-light-green">
             <LoadModal />
           </section>
 
           {data.hero?.map((data) => ( 
             <section className="hero-wrapper subpagehero-wrapper theme-midnight-green" key={data.id} >
-              <SubpageHero data={data}/>
+              <Hero data={data}/>
             </section>
           ))}  
           {/* {data.hero?.map((data) => ( 

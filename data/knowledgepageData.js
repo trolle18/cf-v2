@@ -3,6 +3,7 @@ export const knowledgepageData = [
     id: 9992727,
     type: "subpage",
     theme: "theme-midnight-green",
+
     nav: [
       {
         id: 11002,
@@ -11,14 +12,13 @@ export const knowledgepageData = [
     ],
 
 
-
     hero: [
       {
-        
         id: 2435,
+        theme: "theme-midnight-green",
+        type: "subpage",
         headline: "Viden",
         text: "",
-        theme: "light",
         img: [
           {
             id: 151,

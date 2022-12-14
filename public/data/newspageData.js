@@ -11,12 +11,11 @@ export const newspageData = [
     ],
 
 
-
     hero: [
       {
-        
         id: 2435,
         theme: "light",
+        type: "subpage",
         headline: "Nyheder fra fondet",
         text: "",
         img: [

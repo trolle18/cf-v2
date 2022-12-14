@@ -6,6 +6,7 @@ import LoadModal from '../components/LoadModal';
 import NewsletterBlock from '../components/NewsletterBlock';
 import VideoSection from '../components/VideoSection';
 import Nav from '../components/Nav';
+import Hero from '../components/Hero';
 
 
 export default function SupportedPage() {
@@ -40,7 +41,7 @@ export default function SupportedPage() {
 
           {data.hero?.map((data) => ( 
             <section className="hero-wrapper subpagehero-wrapper theme-midnight-green" key={data.id} >
-              <SubpageHero data={data}/>
+              <Hero data={data}/>
             </section>
           ))}  
           {/* {data.hero?.map((data) => ( 

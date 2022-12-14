@@ -26,48 +26,51 @@ export default function SubpageHero({ data }) {
         }
         if (isImg) { 
             const imgSrc = ( data.img.map((img) => (img.src)) )
+            const imgPos = ( data.img.map((img) => (img.pos)) )
 
             const imgStyle = {
                 height: "100%",
                 width: "100%",
                 backgroundImage: `url( ${imgSrc} )`,
-                backgroundPosition: "center",
+                backgroundPosition: `${imgPos}`,
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
             }
 
             return (
                 <>
-                {data.img.map((img) => (
-                    <div key={img.id} className="hero-cntr__img-cntr">
-                        <div className="hero-cntr__img-cntr__img" style={ imgStyle } ></div>                
-                    </div>
-                ))}
+                <div className="hero-cntr__img-cntr">
+                    {data.img.map((img) => (
+                        <div key={img.id} className="hero-cntr__img-cntr__img" style={ imgStyle }> </div>                
+                    ))}
+                </div>
                 </>
             )
         }
         else { 
             return (
-                <div className="hero-cntr__img-cntr color-hero"></div>
-            ) 
-        }
-    }
-
-    return (
-        <>
-            <div className="hero" key={data.id}>
-                
-                <div className="hero-cntr color-hero">         
-                    {checkMedia(data)}
-
+                <div className="hero-cntr__img-cntr color-hero">
                     <div className="hero-cntr__txt-cntr subpage-hero-text">
                         <div className="hero-cntr__txt-cntr__headline">
                             <h1>{data.headline}</h1>
                         </div>
                     </div>
-
+                </div>
+            ) 
+        }
+    }
+// console.log(data)
+    return (
+        <>
+            <div className="hero" key={data.id}>
+                <div className="hero-cntr color-hero">         
+                    {checkMedia(data)}
+                    <div className="hero-cntr__txt-cntr subpage-hero-text">
+                        <div className="hero-cntr__txt-cntr__headline">
+                            <h1>{data.headline}</h1>
+                        </div>
+                    </div>
                 </div>            
-                
             </div>
         </>
     )
