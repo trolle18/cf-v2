@@ -67,7 +67,7 @@ export default function Hero({ data }) {
         const type = data.type;
 
         if (type === "frontpage") {
-            return null 
+            return ("") 
         } else {
             return ( "subpagehero-wrapper" )
         }

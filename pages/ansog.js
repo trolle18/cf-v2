@@ -40,9 +40,7 @@ export default function ApplicationPage() {
             </section>
 
             {data.hero?.map((data) => ( 
-              <section className="hero-wrapper subpagehero-wrapper theme-midnight-green" key={data.id} >
-                <Hero data={data}/>
-              </section>
+                <Hero key={data.id} data={data}/>
             ))}  
 
             {data.txtBlock?.map((data) => ( 

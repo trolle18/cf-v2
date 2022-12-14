@@ -16,9 +16,10 @@ export const supportedpageData = [
       {
         
         id: 2435,
+        theme: "theme-midnight-green",
+        type: "subpagehero",
         headline: "Hvad har vi støttet?",
         text: "",
-        theme: "light",
         // img: [
         //   {
         //     id: 151,

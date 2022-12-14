@@ -16,6 +16,7 @@ export const homepageData = [
     hero: [
       {        
         id: 212,
+        theme: "theme-text-light-grey",
         type: "frontpage",
         headline: "Vi brygger viden for en oplyst fremtid",
         text: "Carlsbergfondet støtter fri grundforskning inden for naturvidenskab, humaniora og samfundsvidenskab.",

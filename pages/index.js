@@ -9,7 +9,7 @@ import PodcastSection from '../components/PodcastSection'
 import PurposeSection from '../components/PurposeSection';
 import LoadModal from '../components/LoadModal';
 import Nav from '../components/Nav';
-import PageHead from '../components/PageHead';
+// import PageHead from '../components/PageHead';
 
 export default function HomePage() {
   const [sectionData, setSectionData] = useState(null)
@@ -44,11 +44,9 @@ export default function HomePage() {
             </section>
           ))}  
          
- 
+
           {data.hero?.map((data) => ( 
-            <section className="hero-wrapper theme-text-light-grey" key={data.id} >
-              <Hero key={data.id}  data={data}/>
-            </section>
+            <Hero key={data.id}  data={data}/>
           ))} 
           
           {data.txtBlock?.map((data) => ( 

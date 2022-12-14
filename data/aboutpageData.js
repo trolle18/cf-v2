@@ -15,6 +15,8 @@ export const aboutpageData = [
       {
         
         id: 1904,
+        theme: "theme-midnight-green",
+        type: "subpagehero",
         headline: "Introduktion til Carlsbergfondet og formål",
         text: "",
         // img: [

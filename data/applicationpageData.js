@@ -16,9 +16,11 @@ export const applicationpageData = [
       {
         
         id: 1904,
+        theme: "theme-midnight-green",
+        type: "subpagehero",
         headline: "Ansøgninger og bevillinger",
         text: "",
-        theme: "light",
+        
         // img: [
         //   {
         //     id: 1012912,
