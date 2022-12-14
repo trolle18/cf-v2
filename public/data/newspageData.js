@@ -16,14 +16,15 @@ export const newspageData = [
       {
         
         id: 2435,
+        theme: "light",
         headline: "Nyheder fra fondet",
         text: "",
-        theme: "light",
         img: [
           {
             id: 151,
             src: "/data/media/katherine-hero.png",
-            alt: "hero image"
+            alt: "hero image",
+            position: "right",
           }
         ],
         link: [

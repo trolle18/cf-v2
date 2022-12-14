@@ -16,9 +16,9 @@ export const applicationpageData = [
       {
         
         id: 1904,
+        theme: "light",
         headline: "Ansøgninger og bevillinger",
         text: "",
-        theme: "light",
         // img: [
         //   {
         //     id: 1012912,
