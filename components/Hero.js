@@ -1,9 +1,9 @@
-import Image from 'next/image';
 import CtaBtn from './CtaBtn';
 
 
 export default function Hero({ data }) {
 
+    // Check hero media
     function checkMedia(data) {
         const isVideo = data.video;
         const isImg = data.img;
@@ -11,17 +11,16 @@ export default function Hero({ data }) {
         if (isVideo) { 
             return (
                 <div className="hero-cntr__video-cntr">
-                {data.video.map((video) => (
-                    <video
-                    key={video.id}
-                    autoPlay
-                    muted
-                    >
-                        <source src={video.src}/>
-                    </video>
-                ))}
-                <div className="hero-overlay"></div>
-            </div>
+                    {data.video.map((video) => (
+                        <video key={video.id}
+                        // autoPlay
+                        muted
+                        >
+                            <source src={video.src}/>
+                        </video>
+                    ))}
+                    <div className="hero-overlay"></div>
+                </div>
             ) 
         } else if (isImg) { 
             const imgSrc = ( data.img.map((img) => (img.src)) )
@@ -55,10 +54,31 @@ export default function Hero({ data }) {
         }
     }
 
+    // Check theme -> set styletag
+    function checkTheme(data) {
+        const theme = data.theme;
+
+        if (theme) {
+            return(theme)
+        }
+    }
+    // Check type -> set styletag
+    function checkType(data) {
+        const type = data.type;
+
+        if (type === "frontpage") {
+            return null 
+        } else {
+            return ( "subpagehero-wrapper" )
+        }
+    }
+
+
+    // Get hero type 
     function getHeroType(data) {
         const isType = data.type;
 
-        if (isType === "frontpage") { 
+        if (isType === "frontpage") { // If hero type is "frontpage"
             return (
                 <>
                 <div className="hero-cntr">
@@ -89,20 +109,7 @@ export default function Hero({ data }) {
                 </>
             ) 
 
-        } 
-        // else if (isType === "subpage") { 
-        //     return (
-        //         <>
-        //             {checkMedia(data)}
-        //             <div className="hero-cntr__txt-cntr subpage-hero-text">
-        //                 <div className="hero-cntr__txt-cntr__headline">
-        //                     <h1>{data.headline}</h1>
-        //                 </div>
-        //             </div>
-        //         </>
-        //     )
-        // } 
-        else { 
+        } else { 
             return (
                 <>
                 <div className="hero-cntr color-hero">
@@ -121,35 +128,11 @@ export default function Hero({ data }) {
 
     return (
         <>
-            <div className="hero" key={data.id}>
-            {getHeroType(data)}
-                {/* <div className="hero-cntr color-hero">     
-                    {checkMedia(data)}
-
-                    <div className="hero-cntr__txt-cntr">
-
-                        <div className="hero-cntr__txt-cntr__headline">
-                            <h1>{data.headline}</h1>
-                        </div>
-
-                        <div className="hero-cntr__txt-cntr__btm">
-                            <div className="hero-cntr__txt-cntr__btm__text">
-                                <p>{data.text}</p>
-                            </div>
-
-                            <div className="hero-cntr__txt-cntr__btm__cta" href={data.ctaUrl}>
-                                <div className="cta-inner-cntr">
-                                    <div className="cta-btn-cntr plain-light-cta arrow-top-r">
-                                        {data?.link.map((link) => (
-                                            <CtaBtn key={link.id} link={link}/>                          
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>                        
-                    </div>
-                </div>             */}
+        <section className={`hero-wrapper ${checkTheme(data)} ${checkType(data)}`} >
+            <div className="hero" >
+                {getHeroType(data)}
             </div>
+        </section>
         </>
     )
 }

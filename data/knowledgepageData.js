@@ -17,6 +17,7 @@ export const knowledgepageData = [
         id: 2435,
         theme: "theme-midnight-green",
         type: "subpage",
+        styleTag: "",
         headline: "Viden",
         text: "",
         img: [

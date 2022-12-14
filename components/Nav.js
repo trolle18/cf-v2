@@ -12,29 +12,28 @@ const Nav = ({ data }) => {
   const [isLoading, setLoading] = useState(false);
 
 
-    // Hide navbar on scroll
-    const navBackground = () => {
-      if (typeof window !== 'undefined') { 
-        if (window.scrollY > 600) { // if scroll down hide the navbar
-          setNavbg(false); 
-        } else { setNavbg(true) } // if scroll up show the navbar
-      }
-      const n = document.getElementById("nav-bg");
-      if (n.classList.contains("navbg")) { // if dropdown is shown, dont hide nav on scroll
-        setNavbg(true); 
-      } 
-    };
+  // Hide navbar on scroll
+  const navBackground = () => {
+    if (typeof window !== 'undefined') { 
+      if (window.scrollY > 600) { // if scroll down hide the navbar
+        setNavbg(false); 
+      } else { setNavbg(true) } // if scroll up show the navbar
+    }
+    const n = document.getElementById("nav-bg");
+    if (n.classList.contains("navbg")) { // if dropdown is shown, dont hide nav on scroll
+      setNavbg(true); 
+    } 
+  };
 
-    useEffect(() => {
-      if (typeof window !== 'undefined') {
-        window.addEventListener('scroll', navBackground);
-        return () => { // cleanup function 
-          window.removeEventListener('scroll', navBackground);
-        };
-      }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
-
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', navBackground);
+      return () => { // cleanup function 
+        window.removeEventListener('scroll', navBackground);
+      };
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
 
   // Hide navbar on scroll
