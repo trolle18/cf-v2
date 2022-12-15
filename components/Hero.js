@@ -13,7 +13,7 @@ export default function Hero({ data }) {
                 <div className="hero-cntr__video-cntr">
                     {data.video.map((video) => (
                         <video key={video.id}
-                        autoPlay
+                        // autoPlay
                         muted
                         >
                             <source src={video.src}/>

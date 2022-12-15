@@ -6,7 +6,6 @@ import { NavLink } from './NavLink';
 const Nav = ({ data }) => {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  // const [scrollYFromTop, setScrollYFromTop] = useState(0);
   const [navbg, setNavbg] = useState(true);
   const [sectionData, setSectionData] = useState(null);
   const [isLoading, setLoading] = useState(false);
@@ -24,6 +23,7 @@ const Nav = ({ data }) => {
       setNavbg(true); 
     } 
   };
+
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -44,14 +44,19 @@ const Nav = ({ data }) => {
       } else { setShow(true) } // if scroll up show the navbar
       setLastScrollY(window.scrollY); // remember current page location to use in the next move
     }
+
     // if (typeof window !== 'undefined') { 
-    const y = document.getElementById("dropdown"); 
-    const n = document.getElementById("nav-bg");
-    if (y.classList.contains("show")) { // if dropdown is shown, dont hide nav on scroll
-      n.classList.add("show")
+    const dropdown = document.getElementById("dropdown"); 
+    const navBg = document.getElementById("nav-bg");
+    const overflow = document.getElementById("nav-overflow");
+
+    if (dropdown.classList.contains("show")) { // if dropdown is shown, dont hide nav on scroll
+      navBg.classList.add("show")
+      overflow.classList.add("show")
       setShow(true); 
     }  
   };
+
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -101,7 +106,6 @@ function checkTheme(data) {
         {sectionData.data.map((data) => (
 
           <div key={data.id} className={`nav-cntr ${navbg && ''}`} id="nav-bg">
-            {/* <div className="nav-outer-cntr"> */}
             <div className={`nav-outer-cntr ${checkTheme(data) && ''}`}>
               <div className="nav-inner-cntr">
 
@@ -132,6 +136,7 @@ function checkTheme(data) {
           </div>
         ))}
       </nav>
+      <div className="hidden" id="nav-overflow"></div>
     </>       
   );
 };
