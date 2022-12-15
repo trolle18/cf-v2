@@ -73,7 +73,7 @@ export default function NavBurgerMenu({data}) {
           ))}  
         </div>
         <div className="nav-mob-links__dropdown__sec-links-cntr">
-          {data?.secondaryLinks.map((link) => ( 
+          {data?.subLinks.map((link) => ( 
             <NavLink key={link.id} href={link.url} className="nav-mob-links__dropdown__sec-links-cntr__link nav-link">
               <span className="nav-mob-links__dropdown__sec-links-cntr__link__link-text">
                 {link.text}
