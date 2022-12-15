@@ -17,15 +17,6 @@
           width: auto;
           margin: auto auto;
         }
-        // .img {
-        //   height: 100%;
-        //   width: 100%;
-        //   position: relative;
-        //   margin: auto auto;
-        //   background-position: center;
-        //   background-repeat: no-repeat;
-        //   background-size: cover;
-        // }
       }
 
       &__video-cntr {
@@ -156,6 +147,7 @@
           }
         }
       }
+
       &__txt-cntr.subpage-hero-text {
         height: calc(100% - 4em);
         width: 100%;
