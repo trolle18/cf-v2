@@ -21,29 +21,41 @@ export const data = [
       navLinks: [
         {
           id: 981,
-          linkTxt: "Nyheder",
+          text: "Nyheder",
           url: "/nyheder"
         },
         {
           id: 761,
-          linkTxt: "Viden",
+          text: "Viden",
           url: "/viden"
         },
         {
           id: 812,
-          linkTxt: "Hvad har vi støttet",
+          text: "Hvad har vi støttet",
           url: "/hvadharvistottet"
         },
         {
           id: 1161,
-          linkTxt: "Ansøg nu",
+          text: "Ansøg nu",
           url: "/ansog"
         },
         {
           id: 3297,
-          linkTxt: "Om fondet",
+          text: "Om fondet",
           url: "/omfondet"
         }
+      ],
+      secondaryLinks: [
+        {
+          id: 5666,
+          text:"Kontakt",
+          url: "/"
+        },
+        {
+          id: 9266,
+          text:"Vælg sprog",
+          url: "/"
+        },
       ]
     }
   ]

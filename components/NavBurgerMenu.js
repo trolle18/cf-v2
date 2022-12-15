@@ -2,6 +2,7 @@
 // import { useEffect, useState } from 'react';
 
 import { NavLink } from "./NavLink";
+import SearchField from "./SearchField";
 
 export default function NavBurgerMenu({data}) {
   const button = document.getElementById("menu-btn");
@@ -43,7 +44,8 @@ export default function NavBurgerMenu({data}) {
     navLink.forEach(el => el.addEventListener("click", function(e) { 
       button.classList.toggle("change");
       dropdown.classList.toggle("show");
-      if (y.classList.contains("show")) {
+
+      if (dropdown.classList.contains("show")) {
         dropdown.classList.add("hidden");
         dropdown.classList.remove("show");
       }
@@ -61,16 +63,27 @@ export default function NavBurgerMenu({data}) {
       </button>
 
       <div className="nav-mob-links__dropdown hidden" id="dropdown">
-        {data?.navLinks.map((navLink) => ( 
-          <NavLink key={navLink.id} href={navLink.url} className="nav-mob-links__dropdown__link" id="nav-link">
-            <span className="nav-mob-links__dropdown__link__link-div">
-              <span>{navLink.linkTxt}</span>              
-            </span>
-          </NavLink>       
-        ))} 
-        
+        <div className="nav-mob-links__dropdown__links-cntr">
+          {data?.navLinks.map((navLink) => ( 
+            <NavLink key={navLink.id} href={navLink.url} className="nav-mob-links__dropdown__links-cntr__link nav-link">
+              <span className="nav-mob-links__dropdown__links-cntr__link__link-text">
+                <span>{navLink.text}</span>              
+              </span>
+            </NavLink>
+          ))}  
+        </div>
+        <div className="nav-mob-links__dropdown__sec-links-cntr">
+          {data?.secondaryLinks.map((link) => ( 
+            <NavLink key={link.id} href={link.url} className="nav-mob-links__dropdown__sec-links-cntr__link nav-link">
+              <span className="nav-mob-links__dropdown__sec-links-cntr__link__link-text">
+                {link.text}
+              </span>
+            </NavLink>
+          ))}  
+        </div>
+            
+        <SearchField/>
       </div>
-      {/* <div className="nav-mob-links__dropdown__overlay"></div> */}
     </>
   );
 };

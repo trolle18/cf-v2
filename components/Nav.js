@@ -48,11 +48,11 @@ const Nav = ({ data }) => {
     // if (typeof window !== 'undefined') { 
     const dropdown = document.getElementById("dropdown"); 
     const navBg = document.getElementById("nav-bg");
-    const overflow = document.getElementById("nav-overflow");
+    // const overflow = document.getElementById("nav-overflow");
 
     if (dropdown.classList.contains("show")) { // if dropdown is shown, dont hide nav on scroll
       navBg.classList.add("show")
-      overflow.classList.add("show")
+      // overflow.classList.add("show")
       setShow(true); 
     }  
   };
@@ -116,11 +116,10 @@ function checkTheme(data) {
                 <div className="nav-inner-cntr__links">
                   {data?.navLinks.map((link) => (
                     <NavLink key={link.id} href={link.url} >
-                    {link.linkTxt}
+                    {link.text}
                   </NavLink>
                   ))}    
                 
-                    {/* <SearchField/> */}
                 </div>
               </div>
 

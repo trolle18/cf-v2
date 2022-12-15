@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import Article from "./Article";
+import SearchField from "./SearchField";
 
 export default function SortArticleSection({ data }) {
     const [searchValue, setSearchValue] = useState("");
@@ -19,7 +20,8 @@ export default function SortArticleSection({ data }) {
         <>
         <section className="textSection">
             <div className="textSection__cntr">
-                <div className="search-cntr">
+                <SearchField/>
+                {/* <div className="search-cntr">
                     <input 
                     className="search-cntr__input" 
                     type="text" 
@@ -27,7 +29,7 @@ export default function SortArticleSection({ data }) {
                     onChange={(e) => setSearchValue(e.target.value.toLowerCase())} 
                     />
                     <div className="search-svg"></div>
-                </div>
+                </div> */}
 
                 <section className="article-section">
                     {data.articles

@@ -4,13 +4,13 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-bottom: solid $clr_midnight_green 1px;
+  border-bottom: solid $clr_midnight_green 2px;
   position: relative;
 
   &__input {
     height: 100%;
     width: 100%;
-    padding: .5em 0em;
+    padding: .25em 0em;
     border: none;
     background-color: transparent;
     border: solid transparent 1px;
