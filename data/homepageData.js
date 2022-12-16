@@ -39,7 +39,8 @@ export const homepageData = [
             id: 122,
             text: "Ansøg om bevilling",
             url: "/ansog",
-            arrow: "",
+            arrow: "top right",
+            showCta: "y"
           }
         ]
       }

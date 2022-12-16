@@ -37,7 +37,9 @@ export const homepageData = [
           {
             id: 122,
             text: "Ansøg om bevilling",
-            url: "/ansog"
+            url: "/ansog",
+            arrow: "top right",
+            showCta: "y"
           }
         ]
       }

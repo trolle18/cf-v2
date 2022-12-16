@@ -57,7 +57,7 @@ export default function SeeMoreCtaLink({ data }) {
         const isUrl = data.url;       
 
         if (isUrl) {
-            return (<>{data.url}</>)
+            return (data.url)
         } else {
             return (null)
         } 
@@ -66,7 +66,15 @@ export default function SeeMoreCtaLink({ data }) {
     // Check if showCta = y / n
     function setCta(data) {
         const isShow = data.showCta;
-        if (isShow === "y") {
+        if (isShow) {
+            return ( 
+                <a className="seeMore-cntr__inner-cntr" key={data.id} href={checkUrl(data)}>
+                    <div className="arrow-cntr">{checkArrowType(data)}</div>
+                    {checkLinkText(data)}
+                </a>
+            )
+        }
+        else if (isShow === "y") {
             return ( 
                 <a className="seeMore-cntr__inner-cntr" key={data.id} href={checkUrl(data)}>
                     <div className="arrow-cntr">{checkArrowType(data)}</div>
@@ -81,6 +89,9 @@ export default function SeeMoreCtaLink({ data }) {
                 </a>
             )
         } 
+        else if (isShow === "n") {
+            return (null)
+        } 
         else {
             return (null)
         }
@@ -88,7 +99,7 @@ export default function SeeMoreCtaLink({ data }) {
 
     return (
         <>
-        {data?.link.map((data) => (
+        {data?.link?.map((data) => (
            <>{setCta(data)}</>
         ))}
         </>

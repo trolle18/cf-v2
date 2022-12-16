@@ -1,4 +1,5 @@
 import CtaBtn from './CtaBtn';
+import SeeMoreCtaLink from './SeeMoreCtaLink';
 
 
 export default function Hero({ data }) {
@@ -93,14 +94,25 @@ export default function Hero({ data }) {
                                 <p>{data.text}</p>
                             </div>
 
-                            <div className="hero-cntr__txt-cntr__btm__cta" href={data.ctaUrl}>
-                                <div className="cta-inner-cntr">
+                            <div className="hero-cntr__txt-cntr__btm__cta">
+
+                            <div className="seeMore-cntr theme-cta-white seeMore-cntr-trimspace-center" >
+                            {/* <div className="cta-inner-cntr"> */}
+                                    {/* {data?.link.map((data) => ( */}
+                                        
+                                            <SeeMoreCtaLink data={data} />
+                                           
+                                    {/* ))} */}
+                                    {/* </div>  */}
+                                    </div>
+                                {/* 
                                     <div className="cta-btn-cntr plain-light-cta arrow-top-r">
                                         {data?.link.map((link) => (
-                                            <CtaBtn key={link.id} link={link}/>                          
+                                            <SeeMoreCtaLink key={link.id} link={link}/>                          
                                         ))}
-                                    </div>
-                                </div>
+                                   
+                                </div> */}
+                          
                             </div>
                         </div>   
 
