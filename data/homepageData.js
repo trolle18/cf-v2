@@ -38,7 +38,8 @@ export const homepageData = [
           {
             id: 122,
             text: "Ansøg om bevilling",
-            url: "/ansog"
+            url: "/ansog",
+            arrow: "",
           }
         ]
       }
@@ -74,7 +75,8 @@ export const homepageData = [
           {
             id: 122,
             text: "Søg nu",
-            url: "/ansog"
+            url: "/ansog",
+            arrow: "",
           }
         ]
       }
@@ -100,7 +102,8 @@ export const homepageData = [
           {
             id: 122,
             text: "Se alle åbne forslag",
-            url: "/ansog"
+            url: "/ansog",
+            arrow: "",
 
           }
         ]
@@ -120,7 +123,8 @@ export const homepageData = [
           {
             id: 122,
             text: "Flere nyheder",
-            url: "/nyheder"
+            url: "/nyheder",
+            arrow: "",
 
           }
         ],
@@ -136,21 +140,23 @@ export const homepageData = [
             text: "Lorem ipsum dolor sit amet",
             createdDate: "12.11.2022",
             updatedDate: "12.11.2022",
-            link: [
-              {
-                id: 2220,
-                txt: "Læs mere",
-                url: "/nyheder",
-                type: "read"
-              }
-            ],
             img: [
               {
                 id: 3121,
                 src: "/data/media/article1.png",
                 alt: "Citat img"
               }
-            ]
+            ],
+            link: [
+              {
+                id: 2220,
+                txt: "Læs mere",
+                url: "/nyheder",
+                arrow: "",
+                showCta: "n",
+                type: "read"
+              }
+            ],
           },
         
           {
@@ -164,21 +170,23 @@ export const homepageData = [
             text: "Lorem ipsum dolor sit amet",
             createdDate: "12.11.2022",
             updatedDate: "12.11.2022",
-            link: [
-              {
-                id: 2220,
-                txt: "Læs mere",
-                url: "/nyheder",
-                type: "read"
-              }
-            ],
             img: [
               {
                 id: 2331,
                 src: "/data/media/direktør1.png",
                 alt: "img"
               }
-            ]
+            ],
+            link: [
+              {
+                id: 2220,
+                txt: "Læs mere",
+                url: "/nyheder",
+                arrow: "",
+                showCta: "n",
+                type: "read",
+              }
+            ],
           },
         
           {
@@ -192,21 +200,23 @@ export const homepageData = [
             text: "Lorem ipsum dolor sit amet",
             createdDate: "12.11.2022",
             updatedDate: "12.11.2022",
-            link: [
-              {
-                id: 2220,
-                txt: "Læs mere",
-                url: "/nyheder",
-                type: "read"
-              }
-            ],
             img: [
               {
                 id: 6471,
                 src: "/data/media/personnewsimg.png",
                 alt: "img"
               }
-            ]
+            ],
+            link: [
+              {
+                id: 2220,
+                txt: "Læs mere",
+                url: "/nyheder",
+                arrow: "",
+                showCta: "n",
+                type: "read"
+              }
+            ],
           },
         
           {
@@ -220,21 +230,24 @@ export const homepageData = [
             text: "Lorem ipsum dolor sit amet",
             createdDate: "12.11.2022",
             updatedDate: "12.11.2022",
-            link: [
-              {
-                id: 2220,
-                txt: "Læs mere",
-                url: "/nyheder",
-                type: "read"
-              }
-            ],
             img: [
               {
                 id: 2221,
                 src: "/data/media/hedgehog.png",
                 alt: "News article"
               }
-            ]
+            ],
+            link: [
+              {
+                id: 2220,
+                txt: "Læs mere",
+                url: "/nyheder",
+                arrow: "",
+                showCta: "n",
+                type: "read"
+                
+              }
+            ],
           },
         
           {
@@ -248,21 +261,23 @@ export const homepageData = [
             text: "Lorem ipsum dolor sit amet",
             createdDate: "12.11.2022",
             updatedDate: "12.11.2022",
-            link: [
-              {
-                id: 2220,
-                txt: "Læs mere",
-                url: "/nyheder",
-                type: "read"
-              }
-            ],
             img: [
                 {
                   id: 2221,
                   src: "/data/media/gettywhales.png",
                   alt: "News article"
                 }
-              ]
+            ],
+            link: [
+              {
+                id: 2220,
+                txt: "Læs mere",
+                url: "/nyheder",
+                arrow: "",
+                showCta: "n",
+                type: "read"
+              }
+            ],
           }
         ]
       }
@@ -289,7 +304,8 @@ export const homepageData = [
           {
             id: 422,
             text: "Flere begivenheder",
-            url: "/"
+            url: "/",
+            arrow: "",
           }
         ],
         articles: [
@@ -311,7 +327,9 @@ export const homepageData = [
               {
                 id: 531,
                 text: "Mere info",
-                url: ""
+                url: "/",
+                arrow: "",
+                showCta: "n"
               }
             ]
           },
@@ -333,7 +351,9 @@ export const homepageData = [
               {
                 id: 541,
                 text: "Mere info",
-                url: ""
+                url: "/",
+                arrow: "",
+                showCta: "n"
               }
             ]
           },
@@ -355,7 +375,9 @@ export const homepageData = [
               {
                 id: 551,
                 text: "Mere info",
-                url: ""
+                url: "/",
+                arrow: "",
+                showCta: "n"
               }
             ]
           }
@@ -409,7 +431,8 @@ export const homepageData = [
               {
                 id: 331,
                 text: "Mere info",
-                url: "/ansog"
+                url: "/ansog",
+                arrow: "",
               }
             ]
           }          
@@ -509,7 +532,9 @@ export const homepageData = [
               {
                 id: 5951,
                 text: "Afspil",
-                url: "",
+                url: "/",
+                arrow: "",
+                showCta: "n",
                 type: "play"
               }
             ]
@@ -545,7 +570,9 @@ export const homepageData = [
               {
                 id: 661,
                 text: "Afspil",
-                url: "",
+                url: "/",
+                arrow: "",
+                showCta: "n",
                 type: "play"
               }
             ]
@@ -581,7 +608,9 @@ export const homepageData = [
               {
                 id: 853,
                 text: "Afspil",
-                url: "",
+                url: "/",
+                arrow: "",
+                showCta: "n",
                 type: "play"
               }
             ]
@@ -617,7 +646,9 @@ export const homepageData = [
               {
                 id: 3921,
                 text: "Afspil",
-                url: "",
+                url: "/",
+                arrow: "",
+                showCta: "n",
                 type: "play"
               }
             ]
@@ -653,7 +684,9 @@ export const homepageData = [
               {
                 id: 3921,
                 text: "Afspil",
-                url: "",
+                url: "/",
+                arrow: "",
+                showCta: "n",
                 type: "play"
               }
             ]
@@ -689,7 +722,9 @@ export const homepageData = [
               {
                 id: 853,
                 text: "Afspil",
-                url: "",
+                url: "/",
+                arrow: "",
+                showCta: "n",
                 type: "play"
               }
             ]
@@ -725,7 +760,9 @@ export const homepageData = [
               {
                 id: 3921,
                 text: "Afspil",
-                url: "",
+                url: "/",
+                arrow: "",
+                showCta: "n",
                 type: "play"
               }
             ]
@@ -761,7 +798,9 @@ export const homepageData = [
               {
                 id: 3921,
                 text: "Afspil",
-                url: "",
+                url: "/",
+                arrow: "",
+                showCta: "n",
                 type: "play"
               }
             ]
@@ -846,7 +885,8 @@ export const homepageData = [
                 id: 531,
                 text: "",
                 url: "/",
-                arrow: "down right"
+                arrow: "down right",
+                showCta: "y"
               }
             ]
           },
@@ -868,7 +908,8 @@ export const homepageData = [
                 id: 551,
                 text: "",
                 url: "/",
-                arrow: "down right"
+                arrow: "down right",
+                showCta: "y"
               }
             ]
           }
