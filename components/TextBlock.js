@@ -31,8 +31,6 @@ export default function TextBlock({ data }) {
                                 </div>
                             </div>                           
                         </div>
-                    {/* </div>
-                    <div className="textBlock__cntr__inner-cntr">  */}
 
                         <div className="textBlock__cntr__inner-cntr__col-3">
                             <div className="cta-btn-cntr ylw-cta arrow-top-r">

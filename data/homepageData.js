@@ -823,7 +823,8 @@ export const homepageData = [
           {
             id: 422,
             text: "Flere podcasts",
-            url: ""
+            url: "/",
+            arrow: "up right"
           }
         ],
         articles: [
@@ -843,8 +844,8 @@ export const homepageData = [
             link: [
               {
                 id: 531,
-                text: "Link",
-                url: "",
+                text: "",
+                url: "/",
                 arrow: "down right"
               }
             ]
@@ -865,8 +866,8 @@ export const homepageData = [
             link: [
               {
                 id: 551,
-                text: "Link",
-                url: "",
+                text: "",
+                url: "/",
                 arrow: "down right"
               }
             ]

@@ -7,14 +7,9 @@ export default function PodcastSection({ data }) {
     return (
         <>
         <section className="textSection theme-l-grey" >
-                <TagHeadlineSubheadline data={data}/>      
-        {/* </section>    */}
-        
-        {/* <section className="video-section theme-l-grey"> */}
+            <TagHeadlineSubheadline data={data}/>      
             <SwiperCarouselPodcasts data={data}/>                        
-        {/* </section>
 
-        <section className="textSection theme-l-grey"> */}
             <div className="textSection__cntr"> 
                 <div className="seeMore-cntr no-bordertopline">
                     <SeeMoreCtaLink data={data}/>

@@ -1,8 +1,9 @@
 import Image from "next/image";
+import SeeMoreCtaLink from "./SeeMoreCtaLink";
 
 export default function SwiperArticlePodcast ( {data} ) {
 
-    
+
 
     return (
         <>
@@ -24,12 +25,10 @@ export default function SwiperArticlePodcast ( {data} ) {
                        
                         <p className="swiper-article-cont__txt__headline">{data.headline}</p>
                     </div>
-                    
+
                     <div className="seeMore-cntr">
-                        <div className="seeMore-cntr__inner-cntr"> 
-                            <div className="arrow-top-right-cntr"><span className="arrow-top-right"></span></div>
-                        </div>
-                    </div>
+                      <SeeMoreCtaLink data={data}/>
+                    </div>   
 
                 </div>
             </article>
