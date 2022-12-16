@@ -1,6 +1,6 @@
 export const articlesData = [
   {
-    id: 312,
+    id: 1010,
     online: "y",
     type: "article",
     styleTag: "",
@@ -27,9 +27,8 @@ export const articlesData = [
       }
     ]
   },
-
   {
-    id: 233,
+    id: 1212,
     online: "y",
     type: "article",
     styleTag: "",
@@ -56,9 +55,8 @@ export const articlesData = [
       }
     ]
   },
-
   {
-    id: 647,
+    id: 1313,
     online: "y",
     type: "article",
     styleTag: "",
@@ -85,9 +83,8 @@ export const articlesData = [
       }
     ]
   },
-
   {
-    id: 222,
+    id: 1414,
     online: "y",
     type: "article",
     styleTag: "",
@@ -114,9 +111,8 @@ export const articlesData = [
       }
     ],
   },
-
   {
-    id: 267,
+    id: 1515,
     online: "y",
     type: "article",
     styleTag: "",
@@ -144,12 +140,9 @@ export const articlesData = [
     ],
   },
 
-
-
-
-
+  // EVENT ARTICLES
   {
-    id: 53,
+    id: 2020,
     tag: "Foredrag",
     category: "event",
     headline: "Kom til en aften i selskab med hekse, gryder og koste.",
@@ -172,7 +165,7 @@ export const articlesData = [
     ]
   },
   {
-    id: 54,
+    id: 2121,
     tag: "Kulturnatten: Åbent hus",
     category: "event",
     headline: "Vi åbner de ellers lukkede døre til kælderen på Glyptotektet.",
@@ -195,7 +188,7 @@ export const articlesData = [
     ]
   },
   {
-    id: 55,
+    id: 2222,
     tag: "Foredrag",
     category: "event",
     headline: "Kom med til en aften i selskab med hekse, gryder og koste.",
@@ -218,13 +211,9 @@ export const articlesData = [
     ]
   },
 
-
-    
-
-
-
+  // VIDEO ARTICLES    
   {
-    id: 113,
+    id: 3030,
     online: "y",
     type: "video",
     styleTag: "feature",
@@ -260,9 +249,8 @@ export const articlesData = [
       }
     ]
   },
-
   {
-    id: 5224,
+    id: 3131,
     online: "y",
     type: "video",
     styleTag: "regular",
@@ -298,9 +286,8 @@ export const articlesData = [
       }
     ]
   },
-
   {
-    id: 532,
+    id: 3232,
     online: "y",
     type: "video",
     styleTag: "regular",
@@ -336,9 +323,8 @@ export const articlesData = [
       }
     ]
   },
-
   {
-    id: 995,
+    id: 3333,
     online: "y",
     type: "video",
     styleTag: "regular",
@@ -374,9 +360,119 @@ export const articlesData = [
       }
     ]
   },
-
   {
-    id: 29276,
+    id: 3434,
+    online: "y",
+    type: "video",
+    styleTag: "regular",
+    tag: "Talk",
+    category: "video",
+    headline: "På jagt efter spike proteinets akilleshæl",
+    text: "Der har ikke altid eksisteret galakser. De er opstået i løbet af universets historie. Galakser bestsår af en form for fortætning af “mørkt stof” og gas. Tror Professor Johan Fynbo på at der er liv på andre planeter?",
+    time: "03:53",
+    createdDate: "12.11.2022",
+    updatedDate: "12.11.2022",
+    img: [
+      {
+        id: 5141,
+        src: "/data/media/vidarticleimg.png",
+        alt: "img"
+      }
+    ],
+    video: [
+      {
+        id: 11137324,
+        src: "/data/media/videos/greenland1.mp4",
+        alt: "video",
+        img: "/data/media/vidarticle4.png",
+      }
+    ],
+    link: [
+      {
+        id: 3921,
+        text: "Afspil",
+        url: "",
+        type: "play",
+        arrow: ""
+      }
+    ]
+  },
+  {
+    id: 3535,
+    online: "y",
+    type: "video",
+    styleTag: "regular",
+    tag: "Talk",
+    category: "video",
+    headline: "Indlandsisen vil smelte hurtigere mod 2100 end hidtil antaget.",
+    text: "Der har ikke altid eksisteret galakser. De er opstået i løbet af universets historie. Galakser bestsår af en form for fortætning af “mørkt stof” og gas. Tror Professor Johan Fynbo på at der er liv på andre planeter?",
+    time: "03:53",
+    createdDate: "12.11.2022",
+    updatedDate: "12.11.2022",
+    img: [
+      {
+        id: 8360,
+        src: "/data/media/vidarticle3.png",
+        alt: "img"
+      }
+    ],
+    video: [
+      {
+        id: 87824,
+        src: "/data/media/videos/science.mp4",
+        alt: "video",
+        img: "/data/media/vidarticle3.png"
+      }
+    ],
+    link: [
+      {
+        id: 853,
+        text: "Afspil",
+        url: "",
+        type: "play",
+        arrow: ""
+      }
+    ]
+  },
+  {
+    id: 3636,
+    online: "y",
+    type: "video",
+    styleTag: "regular",
+    tag: "Talk",
+    category: "video",
+    headline: "På jagt efter spike proteinets akilleshæl",
+    text: "Der har ikke altid eksisteret galakser. De er opstået i løbet af universets historie. Galakser bestsår af en form for fortætning af “mørkt stof” og gas. Tror Professor Johan Fynbo på at der er liv på andre planeter?",
+    time: "03:53",
+    createdDate: "12.11.2022",
+    updatedDate: "12.11.2022",
+    img: [
+      {
+        id: 5141,
+        src: "/data/media/vidarticle4.png",
+        alt: "img"
+      }
+    ],
+    video: [
+      {
+        id: 11137324,
+        src: "/data/media/videos/greenland2.mp4",
+        alt: "video",
+        img:  "/data/media/vidarticle4.png"
+      }
+    ],
+    link: [
+      {
+        id: 3921,
+        text: "Afspil",
+        url: "",
+        type: "play",
+        arrow: ""
+      }
+    ]
+  },
+  {
+    id: 3737,
     online: "y",
     type: "video",
     styleTag: "regular",
@@ -413,129 +509,9 @@ export const articlesData = [
     ]
   },
 
+  // PODCAST ARTICLES
   {
-    id: 51922,
-    online: "y",
-    type: "video",
-    styleTag: "regular",
-    tag: "Talk",
-    category: "video",
-    headline: "Indlandsisen vil smelte hurtigere mod 2100 end hidtil antaget.",
-    text: "Der har ikke altid eksisteret galakser. De er opstået i løbet af universets historie. Galakser bestsår af en form for fortætning af “mørkt stof” og gas. Tror Professor Johan Fynbo på at der er liv på andre planeter?",
-    time: "03:53",
-    createdDate: "12.11.2022",
-    updatedDate: "12.11.2022",
-    img: [
-      {
-        id: 8360,
-        src: "/data/media/vidarticle3.png",
-        alt: "img"
-      }
-    ],
-    video: [
-      {
-        id: 87824,
-        src: "/data/media/videos/science.mp4",
-        alt: "video",
-        img: "/data/media/vidarticle3.png"
-      }
-    ],
-    link: [
-      {
-        id: 853,
-        text: "Afspil",
-        url: "",
-        type: "play",
-        arrow: ""
-      }
-    ]
-  },
-
-  {
-    id: 21915,
-    online: "y",
-    type: "video",
-    styleTag: "regular",
-    tag: "Talk",
-    category: "video",
-    headline: "På jagt efter spike proteinets akilleshæl",
-    text: "Der har ikke altid eksisteret galakser. De er opstået i løbet af universets historie. Galakser bestsår af en form for fortætning af “mørkt stof” og gas. Tror Professor Johan Fynbo på at der er liv på andre planeter?",
-    time: "03:53",
-    createdDate: "12.11.2022",
-    updatedDate: "12.11.2022",
-    img: [
-      {
-        id: 5141,
-        src: "/data/media/vidarticle4.png",
-        alt: "img"
-      }
-    ],
-    video: [
-      {
-        id: 11137324,
-        src: "/data/media/videos/greenland2.mp4",
-        alt: "video",
-        img:  "/data/media/vidarticle4.png"
-      }
-    ],
-    link: [
-      {
-        id: 3921,
-        text: "Afspil",
-        url: "",
-        type: "play",
-        arrow: ""
-      }
-    ]
-  },
-
-  {
-    id: 991188446,
-    online: "y",
-    type: "video",
-    styleTag: "regular",
-    tag: "Talk",
-    category: "video",
-    headline: "På jagt efter spike proteinets akilleshæl",
-    text: "Der har ikke altid eksisteret galakser. De er opstået i løbet af universets historie. Galakser bestsår af en form for fortætning af “mørkt stof” og gas. Tror Professor Johan Fynbo på at der er liv på andre planeter?",
-    time: "03:53",
-    createdDate: "12.11.2022",
-    updatedDate: "12.11.2022",
-    img: [
-      {
-        id: 5141,
-        src: "/data/media/vidarticleimg.png",
-        alt: "img"
-      }
-    ],
-    video: [
-      {
-        id: 11137324,
-        src: "/data/media/videos/greenland1.mp4",
-        alt: "video",
-        img: "/data/media/vidarticle4.png",
-      }
-    ],
-    link: [
-      {
-        id: 3921,
-        text: "Afspil",
-        url: "",
-        type: "play",
-        arrow: ""
-      }
-    ]
-  },
-        
-
-
-
-
-
-
-
-  {
-    id: 3145,
+    id: 4040,
     online: "y",
     type: "article",
     styleTag: "",
@@ -566,7 +542,7 @@ export const articlesData = [
   },
 
   {
-    id: 2955,
+    id: 4141,
     online: "y",
     type: "article",
     styleTag: "",
@@ -595,6 +571,5 @@ export const articlesData = [
       }
     ]
   }
-        
 
 ]

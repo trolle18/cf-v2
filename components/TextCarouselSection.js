@@ -8,7 +8,6 @@ export default function TextCarouselSection({ data }) {
         <>
                 <section className="textSection theme-l-orange" key={data.id}>
                     <TagHeadlineSubheadline data={data}/>
-                    
                     <div className="swiper-cntr swiper-news-cntr">
                         <SwiperCarousel data={data}/>
                     </div>
