@@ -54,24 +54,42 @@ export default function SeeMoreCtaLink({ data }) {
 
     // Check for url, else return null
     function checkUrl(data) {
-        const isUrl = data.url;
+        const isUrl = data.url;       
+
         if (isUrl) {
+            return (<>{data.url}</>)
+        } else {
+            return (null)
+        } 
+    }
+
+    // Check if showCta = y / n
+    function setCta(data) {
+        const isShow = data.showCta;
+        if (isShow === "y") {
             return ( 
-                <a className="seeMore-cntr__inner-cntr" key={data.id} href={isUrl}>
+                <a className="seeMore-cntr__inner-cntr" key={data.id} href={checkUrl(data)}>
                     <div className="arrow-cntr">{checkArrowType(data)}</div>
                     {checkLinkText(data)}
                 </a>
             )
-        } else {
+        } else if (isShow !== "n") {
+            return ( 
+                <a className="seeMore-cntr__inner-cntr" key={data.id} href={checkUrl(data)}>
+                    <div className="arrow-cntr">{checkArrowType(data)}</div>
+                    {checkLinkText(data)}
+                </a>
+            )
+        } 
+        else {
             return (null)
         }
     }
 
-    
     return (
         <>
         {data?.link.map((data) => (
-           <>{checkUrl(data)}</>
+           <>{setCta(data)}</>
         ))}
         </>
     )
