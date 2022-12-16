@@ -45,21 +45,20 @@ const Nav = ({ data }) => {
       setLastScrollY(window.scrollY); // remember current page location to use in the next move
     }
 
-    // if (typeof window !== 'undefined') { 
+    if (typeof window !== 'undefined') { 
     const dropdown = document.getElementById("dropdown"); 
     const navBg = document.getElementById("nav-bg");
-    // const overflow = document.getElementById("nav-overflow");
 
-    if (dropdown.classList.contains("show")) { // if dropdown is shown, dont hide nav on scroll
-      navBg.classList.add("show")
-      // overflow.classList.add("show")
-      setShow(true); 
-    }  
+      if (dropdown.classList.contains("show")) { // if dropdown is shown, dont hide nav on scroll
+        navBg.classList.add("show")
+        setShow(true); 
+      }  
+    }
   };
 
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined') { // --- obs --- //
       window.addEventListener('scroll', controlNavbar);
       return () => { // cleanup function 
         window.removeEventListener('scroll', controlNavbar);

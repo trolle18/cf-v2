@@ -2,6 +2,8 @@ import Image from "next/image";
 
 export default function SwiperArticlePodcast ( {data} ) {
 
+    
+
     return (
         <>
             <article className="swiper-article podcast-article" key={data.id}>

@@ -296,6 +296,7 @@ export const homepageData = [
           {
             id: 53,
             tag: "Foredrag",
+            category: "event",
             headline: "Kom til en aften i selskab med hekse, gryder og koste.",
             dayMonth: "17.02",
             year: "2023",
@@ -317,6 +318,7 @@ export const homepageData = [
           {
             id: 54,
             tag: "Kulturnatten: Åbent hus",
+            category: "event",
             headline: "Vi åbner de ellers lukkede døre til kælderen på Glyptotektet.",
             dayMonth: "12.05",
             year: "2023",
@@ -338,6 +340,7 @@ export const homepageData = [
           {
             id: 55,
             tag: "Foredrag",
+            category: "event",
             headline: "Kom med til en aften i selskab med hekse, gryder og koste.",
             dayMonth: "16.03",
             year: "2023",
@@ -827,6 +830,7 @@ export const homepageData = [
           {
             id: 3145,
             tag: "Serie",
+            category: "podcast",
             headline: "Fra kaskelothvaler i dybhavet til flagermus i natten",
             episodes: "8 episoder",
             img: [
@@ -840,13 +844,15 @@ export const homepageData = [
               {
                 id: 531,
                 text: "Link",
-                url: ""
+                url: "",
+                arrow: "down right"
               }
             ]
           },
           {
             id: 2955,
             tag: "Serie",
+            category: "podcast",
             headline: "Hvalfangere, rensdyrjægere og jordbrugere i 4500 års grønlandsk historie",
             episodes: "10 episoder",
             img: [
@@ -860,7 +866,8 @@ export const homepageData = [
               {
                 id: 551,
                 text: "Link",
-                url: ""
+                url: "",
+                arrow: "down right"
               }
             ]
           }

@@ -8,7 +8,11 @@ export default function TextCarouselSection({ data }) {
         <>
                 <section className="textSection theme-l-orange" key={data.id}>
                     <TagHeadlineSubheadline data={data}/>
-                    <SwiperCarousel data={data}/>
+                    
+                    <div className="swiper-cntr swiper-news-cntr">
+                        <SwiperCarousel data={data}/>
+                    </div>
+
                     <div className="textSection__cntr"> 
                         <div className="seeMore-cntr">
                             <SeeMoreCtaLink data={data}/>

@@ -6,7 +6,7 @@ const SwiperCarousel = ({ data }) => {
 
     return (
         <>
-        <div className="swiper-cntr swiper-news-cntr">        
+        {/* <div className="swiper-cntr swiper-news-cntr"> */}
             <Swiper
             spaceBetween={ 20 }
             slidesPerView={ 3 }
@@ -39,7 +39,7 @@ const SwiperCarousel = ({ data }) => {
                     </SwiperSlide>
                 ))}
             </Swiper>
-        </div>
+        {/* </div> */}
         </>
     )
 } 
