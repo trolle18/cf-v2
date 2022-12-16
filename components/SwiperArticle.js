@@ -8,7 +8,7 @@ export default function SwiperArticle ({ data }) {
             return (
                  <div className="swiper-article__img-cntr">
                     {data.img.map((img) => (
-                        <Image key={img.id} src={img.src} alt={img.alt} height={600} width={600} />
+                        <Image key={img.id} src={img.src} alt={img.alt} height={1000} width={1000} />
                     ))}
                 </div>                
             )
@@ -34,7 +34,7 @@ export default function SwiperArticle ({ data }) {
                 <article className="swiper-article swiper-news-article theme-plain" key={data.id}>
                     <div className="swiper-article__img-cntr">
                         {data.img.map((img) => (
-                            <Image key={img.id} src={img.src} alt={img.alt} height={600} width={600} />
+                            <Image key={img.id} src={img.src} alt={img.alt} height={1000} width={1000} />
                         ))}                   
                     </div>
                     <div className="swiper-article-cont">
@@ -56,7 +56,7 @@ export default function SwiperArticle ({ data }) {
                 <article className="swiper-article podcast-article" key={data.id}>
                     <div className="img-cntr">
                         {data.img.map((img) => (
-                            <Image key={img.id} src={img.src} alt={img.alt} height={600} width={600} />
+                            <Image key={img.id} src={img.src} alt={img.alt} height={1000} width={1000} />
                         ))}
                         <div className="podcast-icon"></div>
                     </div>
@@ -101,7 +101,7 @@ export default function SwiperArticle ({ data }) {
                 <article className="swiper-article theme-plain" key={data.id}>
                     <div className="swiper-article__img-cntr">
                         {data.img.map((img) => (
-                            <Image key={img.id} src={img.src} alt={img.alt} height={600} width={600} />
+                            <Image key={img.id} src={img.src} alt={img.alt} height={1000} width={1000} />
                         ))}                   
                     </div>
                     <div className="swiper-article-cont">

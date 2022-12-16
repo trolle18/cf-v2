@@ -68,7 +68,25 @@
 
       .swiper-slide {
         margin: auto 0 0 0;
+        padding: 1em 0em 0em 0em;
         bottom: 0%;
+
+        .swiper-article.swiper-news-article {    
+          .swiper-article-cont {
+            &__txt {
+              &__headline {
+                min-height: 92px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                line-clamp: 4; 
+                -webkit-line-clamp: 4; /* number of lines to show */
+                -webkit-box-orient: vertical;
+                
+              }
+            }
+          }
+        }
 
         &:nth-of-type(3n + 1) {
           .swiper-article.swiper-news-article {    

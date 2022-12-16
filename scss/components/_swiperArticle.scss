@@ -91,7 +91,6 @@
 
 
 .swiper-article.podcast-article {
-  // border: solid red 1px;
   .img-cntr {
     height: 260px;
     width: auto;
@@ -133,17 +132,15 @@
           .show-details {
             display: block;
             color: $clr_m_grey;
-
-            
-          }.theme-light-green {
-              color: $clr_light_green;
-            }
+          }
+          .theme-light-green {
+            color: $clr_light_green;
+          } 
         }
 
         &__headline {
           font-size: $fs_xl;
         }
-
       }
 
     .seeMore-cntr {
