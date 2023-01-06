@@ -16,13 +16,14 @@ export const homepageData = [
     hero: [
       {        
         id: 212,
+        theme: "",
         headline: "Vi brygger viden for en oplyst fremtid",
         text: "Carlsbergfondet støtter fri grundforskning inden for naturvidenskab, humaniora og samfundsvidenskab.",
         img: [
           {
             id: 1010122,
-            src: "/data/media/gettywhales.png",
-            alt: "hero image"
+            src: "",
+            alt: ""
           }
         ],
         video: [
@@ -36,7 +37,9 @@ export const homepageData = [
           {
             id: 122,
             text: "Ansøg om bevilling",
-            url: "/ansog"
+            url: "/ansog",
+            arrow: "top right",
+            showCta: "y"
           }
         ]
       }

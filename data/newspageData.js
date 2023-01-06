@@ -16,9 +16,10 @@ export const newspageData = [
       {
         
         id: 2435,
+        theme: "theme-text-light-grey",
+        type: "subpage",
         headline: "Nyheder fra fondet",
         text: "",
-        theme: "light",
         img: [
           {
             id: 151,

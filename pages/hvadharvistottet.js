@@ -6,6 +6,7 @@ import LoadModal from '../components/LoadModal';
 import NewsletterBlock from '../components/NewsletterBlock';
 import VideoSection from '../components/VideoSection';
 import Nav from '../components/Nav';
+import Hero from '../components/Hero';
 
 
 export default function SupportedPage() {
@@ -39,15 +40,8 @@ export default function SupportedPage() {
           </section>
 
           {data.hero?.map((data) => ( 
-            <section className="hero-wrapper subpagehero-wrapper theme-midnight-green" key={data.id} >
-              <SubpageHero data={data}/>
-            </section>
+            <Hero key={data.id} data={data}/>
           ))}  
-          {/* {data.hero?.map((data) => ( 
-            <section className="hero-wrapper subpagehero-wrapper theme-midnight-green" key={data.id} >
-              <Hero data={data}/>
-            </section>
-          ))}   */}
 
           {data.txtBlock?.map((data) => ( 
             <section className="textSection" key={data.id} data={data}>
@@ -58,10 +52,6 @@ export default function SupportedPage() {
           {data.articles?.map((data) => ( 
             <SortArticleSection key={data.id} data={data}/>
           ))}   
-
-           {/* {data.podcastSection?.map((data) => ( 
-            <PodcastSection key={data.id} data={data}/>
-          ))}  */}
 
           {data.videoSection?.map((data) => ( 
             <VideoSection key={data.id} data={data}/>

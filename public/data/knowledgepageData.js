@@ -11,14 +11,14 @@ export const knowledgepageData = [
     ],
 
 
-
     hero: [
       {
-        
         id: 2435,
+        theme: "light",
+        type: "subpage",
         headline: "Viden",
         text: "",
-        theme: "light",
+        
         img: [
           {
             id: 151,

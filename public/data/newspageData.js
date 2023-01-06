@@ -11,19 +11,19 @@ export const newspageData = [
     ],
 
 
-
     hero: [
       {
-        
         id: 2435,
+        theme: "light",
+        type: "subpage",
         headline: "Nyheder fra fondet",
         text: "",
-        theme: "light",
         img: [
           {
             id: 151,
             src: "/data/media/katherine-hero.png",
-            alt: "hero image"
+            alt: "hero image",
+            position: "right",
           }
         ],
         link: [

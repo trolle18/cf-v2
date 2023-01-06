@@ -25,9 +25,7 @@ export default function BlockGridSection({ data }) {
                   </p>
 
                   <div className="flex-textblock-cntr__col__block__text__btm">
-                    <p>
-                      {data.text}
-                    </p> 
+                    <p>{data.text}</p> 
                     <div className="seeMore-cntr seeMore-cntr-trimspace ">
                       <SeeMoreCtaLink data={data}/>
                     </div>
@@ -45,11 +43,10 @@ export default function BlockGridSection({ data }) {
               <div className="flex-textblock-cntr__col__block" key={data.id}>
 
                <div className="flex-textblock-cntr__col__block__img-cntr">
-                
                   {data.img.map((img) => (
                     <Image key={img.id} src={img.src} alt={img.alt} height={600} width={600}/>
-                    ))}
-                  </div>
+                  ))}
+                </div>
 
                 <div className="flex-textblock-cntr__col__block__text">
                   <p className="flex-textblock-cntr__col__block__text__headline">
@@ -57,12 +54,11 @@ export default function BlockGridSection({ data }) {
                   </p>
 
                   <div className="flex-textblock-cntr__col__block__text__btm">
-                    <p>
-                      {data.text}
-                    </p> 
+                    <p>{data.text}</p> 
+
                     <div className="seeMore-cntr seeMore-cntr-trimspace">
                       <SeeMoreCtaLink data={data}/>
-                    </div>                    
+                    </div>           
                   </div>
 
                 </div>                                                               

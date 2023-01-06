@@ -1,9 +1,10 @@
 
 export default function SeeMoreCtaLink({ data }) {
 
+    // Check for link text, else return null
     function checkLinkText(data) {
-        const textExists = data.text;
-        if (textExists) { 
+        const isText = data.text;
+        if (isText) { 
             return (<p>{data.text}</p>) 
         }
         else { 
@@ -11,6 +12,7 @@ export default function SeeMoreCtaLink({ data }) {
         }
     }
 
+    // Check for arrow, and arrow type, else return null
     function checkArrowType(data) {
         const isArrow = data.arrow;
         if (isArrow === "down right") { 
@@ -50,15 +52,55 @@ export default function SeeMoreCtaLink({ data }) {
         }
     }
 
+    // Check for url, else return null
+    function checkUrl(data) {
+        const isUrl = data.url;       
+
+        if (isUrl) {
+            return (data.url)
+        } else {
+            return (null)
+        } 
+    }
+
+    // Check if showCta = y / n
+    function setCta(data) {
+        const isShow = data.showCta;
+        if (isShow) {
+            return ( 
+                <a className="seeMore-cntr__inner-cntr" key={data.id} href={checkUrl(data)}>
+                    <div className="arrow-cntr">{checkArrowType(data)}</div>
+                    {checkLinkText(data)}
+                </a>
+            )
+        }
+        else if (isShow === "y") {
+            return ( 
+                <a className="seeMore-cntr__inner-cntr" key={data.id} href={checkUrl(data)}>
+                    <div className="arrow-cntr">{checkArrowType(data)}</div>
+                    {checkLinkText(data)}
+                </a>
+            )
+        } else if (isShow !== "n") {
+            return ( 
+                <a className="seeMore-cntr__inner-cntr" key={data.id} href={checkUrl(data)}>
+                    <div className="arrow-cntr">{checkArrowType(data)}</div>
+                    {checkLinkText(data)}
+                </a>
+            )
+        } 
+        else if (isShow === "n") {
+            return (null)
+        } 
+        else {
+            return (null)
+        }
+    }
+
     return (
         <>
-        {data?.link.map((data) => (
-            <a className="seeMore-cntr__inner-cntr" key={data.id} href={data?.url}>
-                <div className="arrow-cntr">
-                    {checkArrowType(data)}
-                </div>
-                {checkLinkText(data)}
-            </a>
+        {data?.link?.map((data) => (
+           <>{setCta(data)}</>
         ))}
         </>
     )

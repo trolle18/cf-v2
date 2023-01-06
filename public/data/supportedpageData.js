@@ -11,14 +11,13 @@ export const supportedpageData = [
     ],
 
 
-
     hero: [
       {
-        
         id: 2435,
+        theme: "light",
+        type: "subpage",
         headline: "Hvad har vi støttet?",
         text: "",
-        theme: "light",
         // img: [
         //   {
         //     id: 151,

@@ -1,13 +1,36 @@
 import SwiperArticle from "./SwiperArticle";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
+import ArticleSlide from "./ArticleSlide";
 
-const SwiperCarousel = ({ data }) => {
+const SwiperSlidesCarousel = ({data}) => {
+
+    function getCategory(data) {
+        var isCategory = data.category;
+
+        if (isCategory = "news") {
+            return ("news")
+        }
+        if (isCategory = "videos") {
+            return ("video")
+        }
+        if (isCategory = "podcasts") {
+            return ("podcast")
+        }
+        if (isCategory = "podcasts") {
+            return ("podcast")
+        }
+        if (isCategory = "events") {
+            return ("event")
+        }
+        else {
+            return ("news video podcast event")
+        }
+    }
 
 
     return ( 
         <>
-        {/* <div className="swiper-cntr swiper-news-cntr"> */}
             <Swiper
             spaceBetween={ 20 }
             slidesPerView={ 3 }
@@ -34,15 +57,16 @@ const SwiperCarousel = ({ data }) => {
                 }
             }}
             >
-                {data?.articles.map((data) => (
+                {data?.articleCollection
+                .filter((data) => data.category.toLowerCase().includes(getCategory(data)))
+                .map((data) => (
                     <SwiperSlide key={data.id} data={data}>
-                        <SwiperArticle data={data}/>
+                        <ArticleSlide data={data}/>
                     </SwiperSlide>
                 ))}
             </Swiper>
-        {/* </div> */}
         </>
     )
 } 
 
-export default SwiperCarousel;
+export default SwiperSlidesCarousel;
