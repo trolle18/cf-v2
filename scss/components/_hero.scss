@@ -21,18 +21,18 @@
 
       &__video-cntr {
         height: 100%;
-        width: auto;
+        width: 100%;
         position: relative;
         overflow: hidden;
         object-position: right;
         object-fit: cover;
         filter: contrast(1.5) brightness(0.6);   
-        background-position: center;    
         align-items: center;
+        background-color: $clr_black;
 
         video {
           position: absolute;
-          height: 110%;
+          height: 100%;
           width: auto;
           margin: auto auto;
           left: -50%;

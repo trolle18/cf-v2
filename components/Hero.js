@@ -1,5 +1,12 @@
 import SeeMoreCtaLink from './SeeMoreCtaLink';
 
+  {/*  <video key={video.id}
+                        // autoPlay
+                        muted
+                        >
+                            <source src={video.src}/>
+                        </video>*/}
+
 
 export default function Hero({ data }) {
 
@@ -10,18 +17,19 @@ export default function Hero({ data }) {
 
         if (isVideo) { 
             return (
-                <div className="hero-cntr__video-cntr">
-                    {data.video.map((video) => (
+                <div className="hero-cntr__video-cntr">                   
+                     {data.video.map((video) => (
                         <video key={video.id}
                         // autoPlay
                         muted
                         >
                             <source src={video.src}/>
                         </video>
-                    ))}
+                    ))} 
                     <div className="hero-overlay"></div>
                 </div>
             ) 
+
         } else if (isImg) { 
             const imgSrc = ( data.img.map((img) => (img.src)) )
             const imgStyle = {
@@ -33,14 +41,13 @@ export default function Hero({ data }) {
                 backgroundRepeat: "no-repeat",
             }
             return (
-                <>
                 <div className="hero-cntr__img-cntr">
                     {data.img.map((img) => (
                         <div key={img.id} className="hero-cntr__img-cntr__img" style={ imgStyle }> </div>                
                     ))}
                 </div>
-                </>
             )
+
         } else { 
             return (
                 <div className="hero-cntr__img-cntr color-hero">
