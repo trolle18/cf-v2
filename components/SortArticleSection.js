@@ -1,6 +1,7 @@
+import Link from "next/link";
 import { useEffect, useState } from "react"
 import Article from "./Article";
-import SearchField from "./SearchField";
+// import SearchField from "./SearchField";
 
 export default function SortArticleSection({ data }) {
     const [searchValue, setSearchValue] = useState("");
@@ -20,8 +21,8 @@ export default function SortArticleSection({ data }) {
         <>
         <section className="textSection">
             <div className="textSection__cntr">
-                <SearchField/>
-                {/* <div className="search-cntr">
+                {/* <SearchField /> */}
+                <div className="search-cntr">
                     <input 
                     className="search-cntr__input" 
                     type="text" 
@@ -29,14 +30,20 @@ export default function SortArticleSection({ data }) {
                     onChange={(e) => setSearchValue(e.target.value.toLowerCase())} 
                     />
                     <div className="search-svg"></div>
-                </div> */}
+                </div>
 
                 <section className="article-section">
                     {data.articles
                     .sort ((a, b) => a?.deadline > b?.deadline ? 1 : -1)
                     .filter((data) => data.headline.toLowerCase().includes(searchValue) || matchKeywords(searchValue, data?.keywords))
                     .map((data) => (
-                        <Article key={data.id} data={data} />
+                        <Link 
+                        key={data.id}
+                        href={`/nyheder/artikel/${data.id}`}
+                        >
+                            <Article key={data.id} data={data} />
+                        </Link>
+                        
                     ))}
                 </section>
                 

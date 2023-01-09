@@ -1,7 +1,8 @@
+import { useState } from "react";
 
 
 export default function SearchField() {
-  // const [searchValue, setSearchValue] = useState("");
+  const [searchValue, setSearchValue] = useState("");
 
   //   // Adds function to search for keywords in searchbar 
   //   function matchKeywords(searchValue, keywords) {
