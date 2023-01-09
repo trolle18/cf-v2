@@ -115,12 +115,20 @@
             }
           }
 
-          &__cta {     
+          &__cta {
             height: auto;
             width: auto;
-            margin: auto 0em;
-            padding: 1em .5em;
+            margin: auto auto auto 0;
+            padding: 1em 1em;
             transition: ease-in .10s; 
+
+            // .seeMore-cntr {
+            //   &__inner-cntr {
+            //     p {
+            //       font-size: $fs_l;
+            //     }                
+            //   }
+            // }
 
             .cta-inner-cntr {
               height: auto;
@@ -241,8 +249,16 @@
 
             &__cta {
               width: 30%;
-              margin: 0 0;
+              margin: auto auto;
               padding: 2em 2.75em;
+
+              .seeMore-cntr {
+                &__inner-cntr {
+                  p {
+                    font-size: $fs_l;
+                  }                
+                }
+              }
 
               .cta-inner-cntr {
                 height: 100%;

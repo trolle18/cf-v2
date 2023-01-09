@@ -1,11 +1,5 @@
+import { motion } from "framer-motion";
 import SeeMoreCtaLink from './SeeMoreCtaLink';
-
-  {/*  <video key={video.id}
-                        // autoPlay
-                        muted
-                        >
-                            <source src={video.src}/>
-                        </video>*/}
 
 
 export default function Hero({ data }) {
@@ -91,19 +85,38 @@ export default function Hero({ data }) {
                 <div className="hero-cntr">
                     {checkMedia(data)}
                     <div className="hero-cntr__txt-cntr">
-                        <div className="hero-cntr__txt-cntr__headline">
+                        <motion.div 
+                        className="hero-cntr__txt-cntr__headline"
+                        animate={ {opacity: 1} }
+                        initial={ {opacity: 0} }
+                        exit={ {opacity: 0} }
+                        transition={ {duration: 0.8} }
+                        >
                             <h1>{data.headline}</h1>
-                        </div>
+                        </motion.div>
 
                         <div className="hero-cntr__txt-cntr__btm">
-                            <div className="hero-cntr__txt-cntr__btm__text">
-                                <p>{data.text}</p>
+                            <div  className="hero-cntr__txt-cntr__btm__text">
+                                <motion.p
+                                animate={ {opacity: 1} }
+                                initial={ {opacity: 0} }
+                                exit={ {opacity: 0} }
+                                transition={ {duration: 0.8} }
+                                >
+                                    {data.text}
+                                </motion.p>
                             </div>
 
                             <div className="hero-cntr__txt-cntr__btm__cta">
-                                <div className="seeMore-cntr theme-cta-white seeMore-cntr-trimspace-center" >
+                                <motion.div
+                                className="seeMore-cntr theme-cta-white seeMore-cntr-trimspace-center"
+                                animate={ {opacity: 1} }
+                                initial={ {opacity: 0} }
+                                exit={ {opacity: 0} }
+                                transition={ {duration: 0.8} }
+                                >
                                     <SeeMoreCtaLink data={data} />
-                                </div>
+                                </motion.div>
                             </div>
                         </div>   
 
