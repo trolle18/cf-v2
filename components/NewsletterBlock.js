@@ -10,13 +10,16 @@ export default function NewsletterBlock({ data }) {
         "email": email,
     }
 
-    function handleSubmit(e) {
+    const handleSubmit = (e) => {
         e.preventDefault()
         console.log(user)
+        setEmail("")
+        setName("")
     }
 
+
     return (
-        <>
+    <>
         <section className="textSection" >
             <TagHeadlineSubheadline data={data}/>      
         </section>   
@@ -24,8 +27,7 @@ export default function NewsletterBlock({ data }) {
         <section className="newsletterBlock" >
             <div  className="newsletterBlock__cntr">
 
-                <form className="newsletterBlock__cntr__inner-cntr" id="form" > 
-
+                <form className="newsletterBlock__cntr__inner-cntr" id="form"> 
                     {data?.inputfields
                     .filter((input) => input.type.includes('name'))
                     .map((input) => (
@@ -34,6 +36,7 @@ export default function NewsletterBlock({ data }) {
                             placeholder={input.text} 
                             type="text" 
                             id={input.type}
+                            value={user.name}
                             onChange={e => setName(e.target.value)}
                             />
                         </div>
@@ -47,6 +50,7 @@ export default function NewsletterBlock({ data }) {
                             placeholder={input.text} 
                             type="text" 
                             id={input.type}
+                            value={user.email}
                             onChange={e => setEmail(e.target.value)}
                             />
                         </div>
@@ -74,6 +78,6 @@ export default function NewsletterBlock({ data }) {
 
             </div>         
         </section>        
-        </>
+    </>
     )
 }
