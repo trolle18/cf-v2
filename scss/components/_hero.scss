@@ -31,12 +31,14 @@
         background-color: $clr_black;
 
         video {
+          border: solid red p1x;
           position: absolute;
           height: 100%;
           width: auto;
           margin: auto auto;
           left: -50%;
           right: -50%;
+          align-self: center;
         }
       }
 
