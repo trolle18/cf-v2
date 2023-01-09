@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import React, { useState, useEffect } from 'react';
 import Hero from '../components/Hero'
 import TextCarouselSection from '../components/TextCarouselSection'
@@ -9,7 +8,6 @@ import PodcastSection from '../components/PodcastSection'
 import PurposeSection from '../components/PurposeSection';
 import LoadModal from '../components/LoadModal';
 import Nav from '../components/Nav';
-// import PageHead from '../components/PageHead';
 
 export default function HomePage() {
   const [sectionData, setSectionData] = useState(null)
@@ -25,11 +23,11 @@ export default function HomePage() {
       })
   }, [])
 
-  if (isLoading) return <p></p>
+  if (isLoading) return('')
   if (!sectionData) return <p>No data</p>
 
   return (
-    <>
+    <>        
       {sectionData.homepageData.map((data) => (
         <>
         {data?.nav.map((data) => ( 
@@ -37,13 +35,11 @@ export default function HomePage() {
         ))}  
         
         <main className="page" key={data.id}>
-
           {data?.hero.map((data) => ( 
             <section key={data.id} className="modal-wrapper modal-theme-lightest-green modal-hops-light-green">
               <LoadModal />
             </section>
-          ))}  
-         
+          ))}           
 
           {data.hero?.map((data) => ( 
             <Hero key={data.id}  data={data}/>
