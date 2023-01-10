@@ -3,23 +3,7 @@ import { useRouter } from 'next/router';
 import Nav from '../../../components/Nav/Nav';
 
 
-export default function ArticlePage() {
-  // const [sectionData, setSectionData] = useState(null)
-  // const [isLoading, setLoading] = useState(false)
-
-  // useEffect(() => {
-  //   setLoading(true)
-  //   fetch('/api/newspage')
-  //     .then((res) => res.json())
-  //     .then((sectionData) => {
-  //       setSectionData(sectionData)
-  //       setLoading(false)
-  //     })
-  // }, [])
-
-  // if (isLoading) return <p></p>
-  // if (!sectionData) return <p>No data</p>
-  // console.log(data)
+export default function ArticlePage({params}) {
 
   const router = useRouter()
   const id = router.query.id

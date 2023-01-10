@@ -85,7 +85,7 @@ export default function NewsPage() {
                   .map((data) => (
                     <Link
                     key={data.id}
-                    href={`/artikler/${data.id}`}
+                    href={`/nyheder/${data.id}`}
                     data={data}
                     >
                       <Article key={data.id} data={data} />
