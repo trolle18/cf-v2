@@ -2,7 +2,7 @@
 export default function articlesHandler( req, res ) {
   const { query } = req
   const { id } = query
-  const filtered = articles.filter((p) => p.id === id)
+  const filtered = articles.filter((data) => data.id === id)
 
   // User with id exists
   return filtered.length > 0

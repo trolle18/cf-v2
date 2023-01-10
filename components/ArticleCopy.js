@@ -1,7 +1,12 @@
+import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import SeeMoreCtaLink from "./SeeMoreCtaLink";
 
 export default function ArticleTest ( {data} ) {
+    const router = useRouter()
+    const id = router.query.id
 
     // Check type -> set styletag
     function getMediaType(data) {
@@ -18,12 +23,12 @@ export default function ArticleTest ( {data} ) {
         } 
         if (type === "video") {
             return (
-                <div className="article-img__video-cntr">
+                <div className="article-img__img-cntr">
                     {data.video?.map((video) => (
                         <video
                         key={video.id}
                         muted
-                        controls={true}
+                        controls={false}
                         >
                             <source src={video.src}/>
                         </video>
@@ -35,14 +40,22 @@ export default function ArticleTest ( {data} ) {
 
     return (
         <>
-            <article className="article" key={data?.id}>
+        <Link href={`/artikler/${id}`} data={data}>
+            <motion.article 
+            key={data?.id}
+            className="article" 
+            initial={ {opacity: 0} }
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={ {duration: 0.4} }
+            >
                 <div className="article-img">
-                    {getMediaType(data)}
-                    {/* <div className="article-img__img-cntr">
+                    {/* {getMediaType(data)} */}
+                    <div className="article-img__img-cntr">
                         {data?.img?.map((img) => (
                             <Image key={img?.id} src={img?.src} alt={img?.alt} height={600} width={600} />
                         ))}
-                    </div> */}
+                    </div>
                 </div>
 
                 <div className="article-cnt">
@@ -59,7 +72,8 @@ export default function ArticleTest ( {data} ) {
                     </div>
                 </div>
 
-            </article>
+            </motion.article>
+            </Link>
         </>
     )
 }
