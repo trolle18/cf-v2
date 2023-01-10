@@ -1,13 +1,79 @@
-export const articles = [
+export const articlespageData = [
   {
+    id: 77883010101,
+    type: "subpage",
+    theme: "theme-midnight-green",
+    nav: [
+      {
+        id: 11002,
+        theme: "theme-midnight-green"
+      }
+    ],
+
+
+
+    hero: [
+      {
+        
+        id: 7700119,
+        theme: "theme-text-light-grey",
+        type: "subpage",
+        headline: "Nyheder fra fondet",
+        text: "",
+        img: [
+          {
+            id: 151,
+            src: "/data/media/katherine-hero.png",
+            alt: "hero image"
+          }
+        ],
+        link: [
+          {
+            id: 14,
+            text: "",
+            url: ""
+          }
+        ]
+      }
+    ],
+
+
+
+    txtBlock: [
+      {
+        id: 14057123,
+        tag: "",
+        headline: "Se fondets artikler",
+        headline2nd: "",
+        subheadline: "Nyt om projekter, ansøgninger og alt det andet spændende der er relateret til og omkring Carlsberg-fondets arbejde.",
+        text: "",
+        img: [
+          {
+            id: 111,
+            src: "/data/media/Bryggeren5.jpg",
+            alt: " "
+
+          }
+        ],
+        link: [
+          {
+            id: 121542,
+            text: "",
+            url: "/artikler"
+          }
+        ],
+      }
+    ],
+
     
+
     articles: [
-      // {
-      //   id: 11113599988822,
-      //   headline: "",
-      //   subheadline: "",
-      //   text: "",
-      //   articles: [
+      {
+        id: 7736300222,
+        headline: "",
+        subheadline: "",
+        text: "",
+        articles: [
           {
             id: 54,
             tag: "",
@@ -211,28 +277,9 @@ export const articles = [
                 }
               ]
           },
-    //     ]
-    //   },
-    // // ],
 
 
 
-    // // videoSection: [
-    //   {
-    //     id: 9393939,
-    //     tag: "",
-    //     headline: "Watch & learn",
-    //     headline2nd: "",
-    //     subheadline: "Gå på opdagelse i vores lærerige videocontent og kom med når topforskere fortæller om den seneste viden og viser eksempler hvor spændende videnskab er.",
-    //     text: "Relaterede videoer",
-    //     link: [
-    //       {
-    //         id: 9342,
-    //         text: "Flere videoer",
-    //         url: "/"
-    //       }
-    //     ],
-    //     articles: [
           {
             id: 113,
             online: "y",
@@ -522,10 +569,10 @@ export const articles = [
               }
             ]
           }
-        // ]
+        ]
 
-      // }
-    ],
+      }
+    ]
 
 
 

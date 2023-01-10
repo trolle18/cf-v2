@@ -83,14 +83,7 @@ export default function NewsPage() {
                   .sort ((a, b) => a?.deadline > b?.deadline ? 1 : -1)
                   .filter((data) => data.headline.toLowerCase().includes(searchValue) || matchKeywords(searchValue, data?.keywords))
                   .map((data) => (
-                    <Link
-                    key={data.id}
-                    href={`/nyheder/${data.id}`}
-                    data={data}
-                    >
-                      <Article key={data.id} data={data} />
-                    </Link>
-
+                    <Article key={data.id} data={data} />
                   ))}
                 </section>
               </div>
