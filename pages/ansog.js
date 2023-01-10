@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import SubpageHero from '../components/SubpageHero';
 import TagHeadlineSubheadline from '../components/TextSectionModules/TagHeadlineSubheadline';
 import BlockGridSection from '../components/BlockGridSection';
 import SortArticleSection from '../components/SortArticleSection';
 import SeeMoreCtaLink from '../components/SeeMoreCtaLink';
 import LoadModal from '../components/LoadModal';
-import Nav from '../components/Nav';
+import Nav from '../components/Nav/Nav';
 import Hero from '../components/Hero';
 
 
 export default function ApplicationPage() {
   const [sectionData, setSectionData] = useState(null)
     const [isLoading, setLoading] = useState(false)
-  
+
     useEffect(() => {
       setLoading(true)
       fetch('/api/applicationpage')
@@ -22,13 +21,13 @@ export default function ApplicationPage() {
           setLoading(false)
         })
     }, [])
-  
+
     if (isLoading) return <p></p>
     if (!sectionData) return <p>No data</p>
 
-  return ( 
+  return (
     <>
-      {sectionData.applicationpageData.map((data) => (    
+      {sectionData.applicationpageData.map((data) => (
         <>
           {/* {data?.nav.map((data) => (  */}
           <Nav />
@@ -39,35 +38,35 @@ export default function ApplicationPage() {
               <LoadModal />
             </section>
 
-            {data.hero?.map((data) => ( 
+            {data.hero?.map((data) => (
                 <Hero key={data.id} data={data}/>
-            ))}  
+            ))}
 
-            {data.txtBlock?.map((data) => ( 
+            {data.txtBlock?.map((data) => (
               <section className="textSection" key={data.id} data={data}>
-                <TagHeadlineSubheadline data={data}/>      
-              </section>   
-            ))} 
+                <TagHeadlineSubheadline data={data}/>
+              </section>
+            ))}
 
-            {data.applicationArticles?.map((data) => ( 
+            {data.applicationArticles?.map((data) => (
               <SortArticleSection key={data.id} data={data}/>
-            ))}   
-            {data.txtBevillingSection?.map((data) => ( 
-          
+            ))}
+            {data.txtBevillingSection?.map((data) => (
+
               <section className="textSection"  key={data.id}>
-                <TagHeadlineSubheadline data={data}/>   
-                <div className="textSection__cntr"> 
+                <TagHeadlineSubheadline data={data}/>
+                <div className="textSection__cntr">
                   <div className="seeMore-cntr">
                     <SeeMoreCtaLink data={data}/>
-                  </div> 
-                </div>  
+                  </div>
+                </div>
               </section>
-            ))} 
+            ))}
 
 
-            {data.otherProjectsSection?.map((data) => ( 
+            {data.otherProjectsSection?.map((data) => (
               <BlockGridSection key={data.id} data={data}/>
-            ))} 
+            ))}
 
         </main>
         </>

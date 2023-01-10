@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import SeeMoreCtaLink from './SeeMoreCtaLink';
-import SwiperCarousel from './SwiperCarousel';
+import SwiperCarousel from './Swiper/SwiperCarousel';
 import TagHeadlineSubheadline from './TextSectionModules/TagHeadlineSubheadline';
 
 export default function TextCarouselSection({ data }) {

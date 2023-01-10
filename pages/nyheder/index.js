@@ -4,7 +4,7 @@ import SortArticleSection from '../../components/SortArticleSection';
 import LoadModal from '../../components/LoadModal';
 import NewsletterBlock from '../../components/NewsletterBlock';
 import VideoSection from '../../components/VideoSection';
-import Nav from '../../components/Nav';
+import Nav from '../../components/Nav/Nav';
 import Hero from '../../components/Hero';
 
 

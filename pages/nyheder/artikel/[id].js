@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 // import LoadModal from '../../components/LoadModal';
 // import NewsletterBlock from '../../components/NewsletterBlock';
 // import VideoSection from '../../components/VideoSection';
-import Nav from '../../../components/Nav';
+import Nav from '../../../components/Nav/Nav';
 import Hero from '../../../components/Hero';
 import Article from '../../../components/Article';
 

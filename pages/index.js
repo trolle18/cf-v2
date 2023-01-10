@@ -7,12 +7,12 @@ import NewsletterBlock from '../components/NewsletterBlock'
 import PodcastSection from '../components/PodcastSection'
 import PurposeSection from '../components/PurposeSection';
 import LoadModal from '../components/LoadModal';
-import Nav from '../components/Nav';
+import Nav from '../components/Nav/Nav';
 
 export default function HomePage() {
   const [sectionData, setSectionData] = useState(null)
   const [isLoading, setLoading] = useState(false)
-  
+
   useEffect(() => {
     setLoading(true)
     fetch('/api/homepage')
@@ -27,47 +27,47 @@ export default function HomePage() {
   if (!sectionData) return <p>No data</p>
 
   return (
-    <>        
+    <>
       {sectionData.homepageData.map((data) => (
         <>
-        {data?.nav.map((data) => ( 
+        {data?.nav.map((data) => (
           <Nav key={data.id}/>
-        ))}  
-        
+        ))}
+
         <main className="page" key={data.id}>
-          {/* {data?.hero.map((data) => ( 
+          {/* {data?.hero.map((data) => (
             <section key={data.id} className="modal-wrapper modal-theme-lightest-green modal-hops-light-green">
               <LoadModal />
             </section>
           ))}            */}
 
-          {data.hero?.map((data) => ( 
+          {data.hero?.map((data) => (
             <Hero key={data.id}  data={data}/>
-          ))} 
-          
-          {data.txtBlock?.map((data) => ( 
+          ))}
+
+          {data.txtBlock?.map((data) => (
             <TextBlock key={data.id} data={data}/>
-          ))}  
+          ))}
 
-          {data.txtSliderSection?.map((data) => ( 
+          {data.txtSliderSection?.map((data) => (
             <TextCarouselSection key={data.id} data={data}/>
-          ))} 
+          ))}
 
-          {data.purposeSection?.map((data) => ( 
+          {data.purposeSection?.map((data) => (
             <PurposeSection key={data.id} data={data}/>
-          ))} 
-          
-          {data.videoSection?.map((data) => ( 
+          ))}
+
+          {data.videoSection?.map((data) => (
             <VideoSection key={data.id} data={data}/>
-          ))} 
+          ))}
 
-          {data.podcastSection?.map((data) => ( 
+          {data.podcastSection?.map((data) => (
             <PodcastSection key={data.id} data={data}/>
-          ))} 
+          ))}
 
-          {data.newsletterBlock?.map((data) => ( 
+          {data.newsletterBlock?.map((data) => (
             <NewsletterBlock key={data.id} data={data}/>
-          ))}       
+          ))}
 
         </main>
         </>

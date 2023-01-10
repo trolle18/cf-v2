@@ -4,14 +4,14 @@ import SortArticleSection from '../components/SortArticleSection';
 import LoadModal from '../components/LoadModal';
 import NewsletterBlock from '../components/NewsletterBlock';
 import VideoSection from '../components/VideoSection';
-import Nav from '../components/Nav';
+import Nav from '../components/Nav/Nav';
 import Hero from '../components/Hero';
 
 
 export default function KnowledgePage() {
   const [sectionData, setSectionData] = useState(null)
     const [isLoading, setLoading] = useState(false)
-  
+
     useEffect(() => {
       setLoading(true)
       fetch('/api/knowledgepage')
@@ -21,13 +21,13 @@ export default function KnowledgePage() {
           setLoading(false)
         })
     }, [])
-  
+
     if (isLoading) return <p></p>
     if (!sectionData) return <p>No data</p>
 
-  return ( 
+  return (
     <>
-      {sectionData.knowledgepageData.map((data) => (    
+      {sectionData.knowledgepageData.map((data) => (
         <>
         {/* {data?.nav.map((data) => (  */}
         <Nav />
@@ -38,25 +38,25 @@ export default function KnowledgePage() {
             <LoadModal />
           </section>
 
-          {data.hero?.map((data) => ( 
+          {data.hero?.map((data) => (
             <Hero key={data.id} data={data}/>
-          ))}  
+          ))}
 
-          {data?.txtBlock?.map((data) => ( 
+          {data?.txtBlock?.map((data) => (
             <section className="textSection" key={data.id} data={data}>
-              <TagHeadlineSubheadline data={data}/>      
-            </section>   
-          ))} 
+              <TagHeadlineSubheadline data={data}/>
+            </section>
+          ))}
 
-          {data?.articles?.map((data) => ( 
+          {data?.articles?.map((data) => (
             <SortArticleSection key={data.id} data={data}/>
-          ))}   
+          ))}
 
-          {data?.videoSection?.map((data) => ( 
+          {data?.videoSection?.map((data) => (
             <VideoSection key={data.id} data={data}/>
-          ))} 
+          ))}
 
-          {data?.newsletterBlock?.map((data) => ( 
+          {data?.newsletterBlock?.map((data) => (
             <NewsletterBlock key={data.id} data={data}/>
           ))}
 

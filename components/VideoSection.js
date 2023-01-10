@@ -1,6 +1,6 @@
 import VideoArticle from './VideoArticle';
 import TagHeadlineSubheadline from './TextSectionModules/TagHeadlineSubheadline';
-import SwiperCarouselVideos from './SwiperCarouselVideos';
+import SwiperCarouselVideos from './Swiper/SwiperCarouselVideos';
 import SeeMoreCtaLink from './SeeMoreCtaLink';
 
 export default function VideoSection({ data }) {

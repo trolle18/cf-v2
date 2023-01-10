@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import SubpageHero from '../components/SubpageHero';
 import TagHeadlineSubheadline from '../components/TextSectionModules/TagHeadlineSubheadline';
 import SortArticleSection from '../components/SortArticleSection';
 import LoadModal from '../components/LoadModal';
 import NewsletterBlock from '../components/NewsletterBlock';
 import VideoSection from '../components/VideoSection';
-import Nav from '../components/Nav';
+import Nav from '../components//NavNav';
 import Hero from '../components/Hero';
 
 
 export default function SupportedPage() {
   const [sectionData, setSectionData] = useState(null)
     const [isLoading, setLoading] = useState(false)
-  
+
     useEffect(() => {
       setLoading(true)
       fetch('/api/supportedpage')
@@ -22,13 +21,13 @@ export default function SupportedPage() {
           setLoading(false)
         })
     }, [])
-  
+
     if (isLoading) return <p></p>
     if (!sectionData) return <p>No data</p>
 
-  return ( 
+  return (
     <>
-      {sectionData.supportedpageData.map((data) => (    
+      {sectionData.supportedpageData.map((data) => (
         <>
           {/* {data?.nav.map((data) => (  */}
           <Nav />
@@ -39,25 +38,25 @@ export default function SupportedPage() {
             <LoadModal />
           </section>
 
-          {data.hero?.map((data) => ( 
+          {data.hero?.map((data) => (
             <Hero key={data.id} data={data}/>
-          ))}  
+          ))}
 
-          {data.txtBlock?.map((data) => ( 
+          {data.txtBlock?.map((data) => (
             <section className="textSection" key={data.id} data={data}>
-              <TagHeadlineSubheadline data={data}/>      
-            </section>   
-          ))} 
+              <TagHeadlineSubheadline data={data}/>
+            </section>
+          ))}
 
-          {data.articles?.map((data) => ( 
+          {data.articles?.map((data) => (
             <SortArticleSection key={data.id} data={data}/>
-          ))}   
+          ))}
 
-          {data.videoSection?.map((data) => ( 
+          {data.videoSection?.map((data) => (
             <VideoSection key={data.id} data={data}/>
-          ))} 
+          ))}
 
-          {data.newsletterBlock?.map((data) => ( 
+          {data.newsletterBlock?.map((data) => (
             <NewsletterBlock key={data.id} data={data}/>
           ))}
 
