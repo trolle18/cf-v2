@@ -4,7 +4,7 @@ import SortArticleSection from '../components/SortArticleSection';
 import LoadModal from '../components/LoadModal';
 import NewsletterBlock from '../components/NewsletterBlock';
 import VideoSection from '../components/VideoSection';
-import Nav from '../components//NavNav';
+import Nav from '../components/Nav/Nav';
 import Hero from '../components/Hero';
 
 
@@ -27,14 +27,12 @@ export default function SupportedPage() {
 
   return (
     <>
+      <Nav />
       {sectionData.supportedpageData.map((data) => (
-        <>
-          {/* {data?.nav.map((data) => (  */}
-          <Nav />
-          {/* ))}   */}
+        <>          
         <main className="page" key={data.id}>
 
-        <section className="modal-wrapper modal-theme-light-orange modal-hops-light-green">
+          <section className="modal-wrapper modal-theme-light-orange modal-hops-light-green">
             <LoadModal />
           </section>
 
