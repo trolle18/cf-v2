@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import useSWR from 'swr';
-import Article from './Article';
+// import Article from './Article';
 import ArticleTest from './ArticleCopy';
 
 
@@ -44,7 +44,7 @@ export default function AllArticles() {
           <section className="article-section">
             {data
             .sort ((a, b) => a?.deadline > b?.deadline ? 1 : -1)
-            .filter((data) => data.headline.toLowerCase().includes(searchValue) || matchKeywords(searchValue, data?.keywords))
+            .filter((data) => data?.headline.toLowerCase().includes(searchValue) || matchKeywords(searchValue, data?.keywords))
             .map((data) => (
               <ArticleTest key={data.id} data={data} />
             ))}
