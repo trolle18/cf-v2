@@ -1,13 +1,13 @@
 export const articles = [
-  {
+  // {
     
-    articles: [
-      {
-        id: 11113599988822,
-        headline: "",
-        subheadline: "",
-        text: "",
-        articles: [
+    // articles: [
+      // {
+      //   id: 11113599988822,
+      //   headline: "",
+      //   subheadline: "",
+      //   text: "",
+      //   articles: [
           {
             id: 54,
             tag: "",
@@ -210,29 +210,29 @@ export const articles = [
                   alt: "News article"
                 }
               ]
-          }
-        ]
-      },
-    // ],
+          },
+    //     ]
+    //   },
+    // // ],
 
 
 
-    // videoSection: [
-      {
-        id: 9393939,
-        tag: "",
-        headline: "Watch & learn",
-        headline2nd: "",
-        subheadline: "Gå på opdagelse i vores lærerige videocontent og kom med når topforskere fortæller om den seneste viden og viser eksempler hvor spændende videnskab er.",
-        text: "Relaterede videoer",
-        link: [
-          {
-            id: 9342,
-            text: "Flere videoer",
-            url: "/"
-          }
-        ],
-        articles: [
+    // // videoSection: [
+    //   {
+    //     id: 9393939,
+    //     tag: "",
+    //     headline: "Watch & learn",
+    //     headline2nd: "",
+    //     subheadline: "Gå på opdagelse i vores lærerige videocontent og kom med når topforskere fortæller om den seneste viden og viser eksempler hvor spændende videnskab er.",
+    //     text: "Relaterede videoer",
+    //     link: [
+    //       {
+    //         id: 9342,
+    //         text: "Flere videoer",
+    //         url: "/"
+    //       }
+    //     ],
+    //     articles: [
           {
             id: 113,
             online: "y",
@@ -522,14 +522,14 @@ export const articles = [
               }
             ]
           }
-        ]
+        // ]
 
-      }
-    ],
-
-
+      // }
+    // ],
 
 
 
-  }
+
+
+  // }
 ]
