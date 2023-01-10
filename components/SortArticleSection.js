@@ -36,12 +36,12 @@ export default function SortArticleSection({ data }) {
                     .sort ((a, b) => a?.deadline > b?.deadline ? 1 : -1)
                     .filter((data) => data.headline.toLowerCase().includes(searchValue) || matchKeywords(searchValue, data?.keywords))
                     .map((data) => (
-                        <Link 
-                        key={data.id}
-                        href={`/nyheder/artikel/${data.id}`}
-                        >
+                        // <Link 
+                        // key={data.id}
+                        // href={`/nyheder/artikel/${data.id}`}
+                        // >
                             <Article key={data.id} data={data} />
-                        </Link>
+                        // </Link>
                         
                     ))}
                 </section>
