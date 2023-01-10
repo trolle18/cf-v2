@@ -1,52 +1,40 @@
-// import React, { useState, useEffect } from 'react';
-// import { useRouter } from 'next/router';
+import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import useSWR from 'swr'
 // import Image from 'next/image';
-// import Nav from '../../components/Nav/Nav';
+import Nav from '../../components/Nav/Nav';
 // import articles from "../api/artikler"
 
-// const Article = ({ data }) => {
-//   // return {
-//     <>
-//     <Nav />
-//       <main className="page">
-//         {/* <h1>Article details {data.id}</h1> */}
-//         {/* <p>{data.headline}</p> */}
-//       </main>
-//     </>
-//   // }
+const fetcher = async (url) => {
+  const res = await fetch(url)
+  const data = await res.json()
 
-// }
+  if (res.status !== 200) {
+    throw new Error(data.message)
+  }
+  return data
+}
 
-// export default Article
-
-import Layout from '../../components/layout'
-import { getAllPostIds, getPostData } from '../../lib/posts'
-
-export default function Post({ postData }) {
-  return (
-    <Layout>
-      {postData.title}
-      <br />
-      {postData.id}
-      <br />
-      {postData.date}
-    </Layout>
+export default function ArticlePage () {
+  const { query } = useRouter()
+  const { data, error } = useSWR(
+    () => query.id && `/api/articlespage/${query.id}`,
+    fetcher
   )
+
+  if (error) return <div>{error.message}</div>
+  if (!data) return <div>Loading...</div>
+
+
+  return (
+    <>
+    <Nav />
+      <main className="page">
+        <h1>Article details {data.id}</h1>
+        {/* <p>{data.headline}</p> */}
+      </main>
+    </>
+  )
+
 }
 
-export async function getStaticPaths() {
-  const paths = getAllPostIds()
-  return {
-    paths,
-    fallback: false
-  }
-}
-
-export async function getStaticProps({ params }) {
-  const postData = getPostData(params.id)
-  return {
-    props: {
-      postData
-    }
-  }
-}

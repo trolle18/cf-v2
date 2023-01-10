@@ -40,16 +40,16 @@ export default function VideoArticle ( {data} ) {
                 <div className="article-img">
                     {/* {getMedia(data)} */}
                     <div className="article-img__video-cntr">
-                    {data.video?.map((video) => (
-                        <video
-                        key={video.id}
-                        muted
-                        controls={true}
-                        >
-                            <source src={video.src}/>
-                        </video>
-                    ))}                        
-                </div>
+                        {data.video?.map((video) => (
+                            <video
+                            key={video.id}
+                            muted
+                            controls={true}
+                            >
+                                <source src={video.src}/>
+                            </video>
+                        ))}                        
+                    </div>
                     
                 </div>
                 <div className="article-cnt">

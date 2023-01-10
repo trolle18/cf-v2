@@ -3,53 +3,34 @@ import TagHeadlineSubheadline from '../../components/TextSectionModules/TagHeadl
 import LoadModal from '../../components/LoadModal';
 import Nav from '../../components/Nav/Nav';
 import Hero from '../../components/Hero';
-import Article from "../../components/Article";
-import Link from 'next/link';
+import AllArticles from '../../components/AllArticles';
+
 
 
 export default function ArticlesPage() {
-  // const [sectionData, setSectionData] = useState(null)
-  // const [isLoading, setLoading] = useState(false)
-  // const [searchValue, setSearchValue] = useState("");
+  const [sectionData, setSectionData] = useState(null)
+  const [isLoading, setLoading] = useState(false)
 
-  // useEffect(() => {
-  //   setLoading(true)
-  //   fetch('/api/articlespage')
-  //     .then((res) => res.json())
-  //     .then((sectionData) => {
-  //       setSectionData(sectionData)
-  //       setLoading(false)
-  //     })
-  // }, [])
+  useEffect(() => {
+    setLoading(true)
+    fetch('/api/articlespage')
+      .then((res) => res.json())
+      .then((sectionData) => {
+        setSectionData(sectionData)
+        setLoading(false)
+      })
+  }, [])
 
-  // if (isLoading) return <p></p>
-  // if (!sectionData) return <p>No data</p>
-
-  // const isData = () => {
-  //   if(sectionData) return ("data present")
-  //   else return ("no data")
-  // }
-
-  // console.log( isData() )
-
-
-  // // Adds function to search for keywords in searchbar
-  // function matchKeywords(searchValue, keywords) {
-  //   let match = false;
-  //   for (const keyword of keywords) {
-  //       if (keyword.toLowerCase().includes(searchValue)) {
-  //           match = true;
-  //       }
-  //   }
-  //   return match;
-  // }
-
+  if (isLoading) return <p></p>
+  if (!sectionData) return <p>No data</p>
+  
   return (
     <>
       <Nav />
-      {sectionData?.articlespageData?.map((data) => (
-        <main className="page" key={data.id}>
-
+      {sectionData.articlespageData.map((data) => (
+        <main className="page" 
+        key={data.id}
+        >
           <section className="modal-wrapper modal-theme-light-orange modal-hops-light-green">
             <LoadModal />
           </section>
@@ -57,62 +38,18 @@ export default function ArticlesPage() {
           {data.hero?.map((data) => (
               <Hero key={data.id} data={data}/>
           ))}
-
           {data.txtBlock?.map((data) => (
             <section className="textSection" key={data.id} data={data}>
               <TagHeadlineSubheadline data={data}/>
             </section>
           ))}
 
-
-
-
-          {data.articles?.map((data) => (
-            <section className="textSection" key={data.id}>
-              <div className="textSection__cntr">
-
-                <div className="search-cntr">
-                  <input
-                  className="search-cntr__input"
-                  type="text"
-                  placeholder="Søg"
-                  onChange={(e) => setSearchValue(e.target.value.toLowerCase())}
-                  />
-                  <div className="search-svg"></div>
-                </div>
-
-                <section className="article-section">
-                  {data.articles
-                  .sort ((a, b) => a?.deadline > b?.deadline ? 1 : -1)
-                  .filter((data) => data.headline.toLowerCase().includes(searchValue) || matchKeywords(searchValue, data?.keywords))
-                  .map((data) => (
-                    <Link
-                    key={data.id}
-                    href={`/nyheder/${data.id}`}
-                    data={data}
-                    >
-                      <Article key={data.id} data={data} />
-                    </Link>
-
-                  ))}
-                </section>
-              </div>
-            </section>
-          ))}
-
+          <AllArticles/>
 
         </main>
-      ))}
+        ))}
     </>
   )
 }
 
 
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData()
-  return {
-    props: {
-      allPostsData
-    }
-  }
-}
