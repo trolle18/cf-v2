@@ -50,32 +50,38 @@ export const data = [
             {
               id: 1811,
               text: "Glyptoteket",
-              url: "/"
+              url: "https://glyptoteket.dk/",
+              openNewPage: true,
             },
             {
               id: 1812,
               text: "Frederiksborg Museum",
-              url: "/"
+              url: "https://dnm.dk/",
+              openNewPage: true,
             },
             {
               id: 1813,
               text: "Ny Carlsbergfondet",
-              url: "/"
+              url: "https://ny-carlsbergfondet.dk/",
+              openNewPage: true,
             },
             {
               id: 1814,
               text: "Carlsberg Laboratorium",
-              url: "/"
+              url: "https://www.carlsbergfondet.dk/da/Om-fondet/Carlsbergfondet/Carlsbergfamilien/Carlsberg-Laboratorium",
+              openNewPage: true,
             },
             {
               id: 1815,
               text: "Tuborgfondet",
-              url: "/"
+              url: "https://www.tuborgfondet.dk/",
+              openNewPage: true,
             },
             {
               id: 1816,
               text: "Carlsberg Group",
-              url: "/"
+              url: "https://www.carlsberggroup.com/",
+              openNewPage: true,
             }
           ]
         },

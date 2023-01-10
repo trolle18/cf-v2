@@ -20,6 +20,15 @@ export default function Footer() {
     if (isLoading) return <p></p>
     if (!sectionData) return <p>No data</p>
 
+    function linkTarget(link) {
+        const openNewPage = link.openNewPage
+        if (openNewPage) {
+            if (openNewPage === true) {
+                return "_blank"
+            }
+        }
+    }
+
 
     return (
         <>        
@@ -55,8 +64,12 @@ export default function Footer() {
                                 </a>                                    
                                     <div className="footer-top__col-2__box__links">
                                         {navLink?.links.map((link) => (
-                                            <a key={link.id} href={link.url}>
-                                                <p key={link.id}>{link.text}</p>
+                                            <a 
+                                            key={link.id} 
+                                            href={link.url}
+                                            target={linkTarget(link)}
+                                            >
+                                               <p>{link.text}</p>
                                             </a>
                                         ))}
                                     </div>
@@ -64,12 +77,16 @@ export default function Footer() {
                             ))}
                         </div>
                     </div>
+
+                    {/* BOTTOM LINKS */}
                     <div className="footer-btm">
                         <div className="footer-btm__col-1">
                             {data?.btmLinks.map((link) => (
                                 <p key={link.id}>{link.text}</p>
                             ))}
                         </div>
+
+                        {/* SOCIAL MEDIA LINKS */}
                         <div className="footer-btm__col-2">
                         {data?.someLinks.map((link) => (
                             <a key={link.id} href={link.url} target="_blank" rel="noreferrer">
