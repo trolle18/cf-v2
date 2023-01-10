@@ -50,25 +50,28 @@ const fetcher = async (url) => {
 export default function ArticlePage () {
   const { query } = useRouter()
   const { data, error } = useSWR(
-    () => query.id && `/api/articles/${query.id}`,
+    () => query.data.id && `/api/articles/${query.data.id}`,
     fetcher 
   )
-
-
-  if (error) return <div>{error.message}</div>
-  if (!data) return <div>Loading...</div>
-
 
   if (error) return (
   <div> <p style={{fontSize: "2rem"}}>{error.message}</p> </div>
   // console.log(error.message), window.history.back()
   )
-  if (!data) return <div><p>Loading...</p></div>
+  if (!data) return <div><p>Loading...</p></div> 
+  console.log(data)
+
+  if (query.data.id === data.id) { return <p>data</p>}
   
   return (
     <>
       <Nav />
       <main className="page">
+        {data.map((data) => {
+          <h1>
+            {data.id}
+          </h1>
+        })}
         <h1>
           Article details 
           {data.id}
