@@ -24,16 +24,18 @@ import Nav from '../../components/Nav/Nav';
 //   return data
 // }
 
-const fetcher = async (url) => {
-// export async function fetcher(url) {
-  const res = await fetch(url)
-  const data = await res.json()
+// ------------------------
 
-  if (res.status !== 200) {
-    throw new Error(data.message)
-  }
-  return data
-}
+
+// const fetcher = async (data) => {
+//   const res = await fetch(`https://localhost:3000/api/articles/${data.id}`)
+//   const articleData = await res.json()
+
+//   if (res.status !== 200) {
+//     throw new Error(articleData.message)
+//   }
+//   return articleData
+// }
 
 export default function ArticlePage () {
   const { query } = useRouter()
@@ -41,19 +43,16 @@ export default function ArticlePage () {
     () => query.id && `/api/articles/${query.id}`,
     fetcher 
   )
-  // const res = await fetch(`/api/articles/${query.id}`)
-  // const data = await res.json()
 
-  // if (error) return <div>{error.message}</div>
-  // if (!data) return <div>Loading...</div>
 
-  // const {id} = router.query
-  // const { query } = useRouter()
-  // const { data, error } = useSWR( () => 
-  //   query.id && `/api/articles/${query.id}`, fetcher
-  // )
+  if (error) return <div>{error.message}</div>
+  if (!data) return <div>Loading...</div>
 
-  if (error) return <div> <p style={{fontSize: "2rem"}}>{error.message}</p> </div>
+
+  if (error) return (
+  <div> <p style={{fontSize: "2rem"}}>{error.message}</p> </div>
+  // console.log(error.message), window.history.back()
+  )
   if (!data) return <div><p>Loading...</p></div>
   
   return (

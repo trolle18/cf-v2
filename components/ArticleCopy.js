@@ -40,7 +40,7 @@ export default function ArticleTest ( {data} ) {
 
     return (
         <>
-        <Link href={`/artikler/${id}`} data={data}>
+        <Link href={`/artikler/${data.id}`} data={data}>
             <motion.article 
             key={data?.id}
             className="article" 
