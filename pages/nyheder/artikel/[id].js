@@ -27,28 +27,31 @@ export default function ArticlePage({data}) {
   
     if (isLoading) return <p></p>
     if (!sectionData) return <p>No data</p>
+    console.log(data)
 
   return ( 
     <>
     
     <Nav />
       
-        <>
-        
-        <main className="page" >
-          <Article data={data} />
+      
+         {sectionData?.newspageData.map((data) => (   
+        <main className="page" key={data.id}>
+          {data.articles.map((data) => (
+          <Article data={data} key={data.id}/>
+          ))}
 {/* 
-        {sectionData?.newspageData.map((data) => (    
+        
           <>
             {data?.hero?.map((data) => ( 
               <Hero key={data.id} data={data}/>
-            ))}  
+          
           </>
         ))} */}
 
         </main>
-        </>
-     
+      
+       ))}  
     </>
   )
 }

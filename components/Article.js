@@ -8,7 +8,7 @@ export default function Article ( {data} ) {
             <article className="article" key={data?.id}>
                 <div className="article-img">
                     <div className="article-img__img-cntr">
-                        {data?.img.map((img) => (
+                        {data?.img?.map((img) => (
                             <Image key={img?.id} src={img?.src} alt={img?.alt} height={600} width={600} />
                         ))}
                     </div>

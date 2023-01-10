@@ -14,7 +14,7 @@ export default function SeeMoreCtaLink({ data }) {
 
     // Check for arrow, and arrow type, else return null
     function checkArrowType(data) {
-        const isArrow = data.arrow;
+        const isArrow = data?.arrow;
         if (isArrow === "down right") { 
             return (
             <span className="arrow-down-right"></span>

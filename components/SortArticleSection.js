@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import Article from "./Article";
 // import SearchField from "./SearchField";
 
@@ -21,7 +21,6 @@ export default function SortArticleSection({ data }) {
         <>
         <section className="textSection">
             <div className="textSection__cntr">
-                {/* <SearchField /> */}
                 <div className="search-cntr">
                     <input 
                     className="search-cntr__input" 
