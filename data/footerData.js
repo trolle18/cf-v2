@@ -93,17 +93,20 @@ export const data = [
             {
               id: 1881,
               text: "Carlsbergfondet",
-              url: "/omfondet"
+              url: "/omfondet",
+              openNewPage: false,
             },
             {
               id: 1882,
               text: "Passion for perfektion",
-              url: "/omfondet"
+              url: "/omfondet",
+              openNewPage: false,
             },
             {
               id: 1883,
               text: "Hvem er vi",
-              url: "/omfondet"
+              url: "/omfondet",
+              openNewPage: false,
             }
           ]
         }
@@ -111,21 +114,24 @@ export const data = [
       contactInfo: [
         {
           id: 555,
-          text: "H.C. Andersens Boulevard 35",
+          text: "H.C. Andersens Boulevard 35, 1553 København V",
           subtext: "1553 København V",
-          url: "https://www.google.com/maps/place/Carlsbergfondet/@55.6731157,12.5716237,17z/data=!3m1!4b1!4m5!3m4!1s0x465253130a50a91b:0x315a146e2dc47bb8!8m2!3d55.6731093!4d12.5738012"
+          url: "https://www.google.com/maps/place/Carlsbergfondet/@55.6731157,12.5716237,17z/data=!3m1!4b1!4m5!3m4!1s0x465253130a50a91b:0x315a146e2dc47bb8!8m2!3d55.6731093!4d12.5738012",
+          openNewPage: true,
         },
         {
           id: 337,
           text: "+45 33 43 53 63",
-          url: "",
-          type: "tel:'+4533435363'"
+          url: "tel:'+4533435363'",
+          type: "tel:'+4533435363'",
+          openNewPage: false,
         },
         {
           id: 8832,
           text: "info@carlsbergfondet.dk",
-          url: "",
-          type: "mailto:info@carlsbergfondet.dk"
+          url: "mailto:info@carlsbergfondet.dk",
+          type: "mailto:info@carlsbergfondet.dk",
+          openNewPage: false,
         }
       ],
       btmLinks: [
@@ -137,7 +143,8 @@ export const data = [
         {
           id: 27,
           text: "Find en medarbejder",
-          url: "https://www.carlsbergfondet.dk/da/Om-fondet/Organisation/Sekretariatet"
+          url: "https://www.carlsbergfondet.dk/da/Om-fondet/Organisation/Sekretariatet",
+          openNewPage: true,
         }
       ],
       someLinks: [
@@ -145,25 +152,29 @@ export const data = [
           id: 55,
           text: "Instagram",
           altText: "IG",
-          url: "https://www.instagram.com/carlsbergfondet/?hl=en"
+          url: "https://www.instagram.com/carlsbergfondet/?hl=en",
+          openNewPage: true,
         },
         {
           id: 67,
           text: "Facebook",
           altText: "FB",
-          url: "https://www.facebook.com/carlsbergfondet/"
+          url: "https://www.facebook.com/carlsbergfondet/",
+          openNewPage: true,
         },
         {
           id: 43,
           text: "Youtube",
           altText: "YT",
-          url: "https://www.youtube.com/c/Carlsbergfondet1876?themeRefresh=1"
+          url: "https://www.youtube.com/c/Carlsbergfondet1876?themeRefresh=1",
+          openNewPage: true,
         },
         {
           id: 97,
           text: "Linkedin",
           altText: "LI",
-          url: "https://www.linkedin.com/company/carlsbergfondet-carlsberg-foundation"
+          url: "https://www.linkedin.com/company/carlsbergfondet-carlsberg-foundation",
+          openNewPage: true,
         }
       ]
     }
