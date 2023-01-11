@@ -5,12 +5,12 @@
       width: auto;
       position: relative;
       background-color: $clr_white;
-      
+
       &__img-cntr {
         height: 100%;
         width: 100%;
         position: relative;
-        filter: contrast(1.5) brightness(0.6);   
+        filter: contrast(1.5) brightness(0.6);
 
         img {
           height: 100%;
@@ -26,7 +26,7 @@
         overflow: hidden;
         object-position: right;
         object-fit: cover;
-        filter: contrast(1.5) brightness(0.6);   
+        filter: contrast(1.5) brightness(0.6);
         align-items: center;
         background-color: $clr_black;
 
@@ -51,7 +51,7 @@
         top: 0%;
         right: 0%;
         background-color: rgba(0, 0, 0, .2);
-        filter: contrast(1.5) brightness(0.8); 
+        filter: contrast(1.5) brightness(0.8);
       }
 
       &__img-cntr.color-hero {
@@ -62,7 +62,7 @@
         background-repeat: no-repeat;
         background-position: center right 10%;
         background-size: cover;
-        // filter: contrast(1.5) brightness(0.8);       
+        // filter: contrast(1.5) brightness(0.8);
       }
 
       &__txt-cntr {
@@ -76,6 +76,60 @@
         flex-direction: column;
         justify-content: space-between;
         gap: 1em;
+
+        .error-text {
+          height: auto;
+          width: auto;
+          max-width: 100vw;
+          padding: 2em 1em;
+          word-wrap: normal;
+          word-break: break-word;
+          hyphens: auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          h1 {
+            width: 100%;
+            font-size: $fs_2xl;
+            line-height: 1.5em;
+          }
+          a {
+            height: max-content;
+            width: max-content;
+            color: $clr_lightest_green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: .5em;
+            transition: ease-in .1s;
+
+            div {
+              height: max-content;
+              width: max-content;
+              margin: auto 0;
+              padding: .25em;
+              border-radius: 100px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border: solid $clr_lightest_green 1px;
+
+              svg {
+                height: 100%;
+                width: 100%;
+                transition: ease-in .1s;
+              }
+            }
+            &:hover {
+              div {
+                svg {
+                  transform: rotate(-45deg);
+                }
+              }
+            }
+          }
+        }
 
         &__headline {
           height: auto;
@@ -120,13 +174,13 @@
             width: auto;
             margin: auto auto auto 0;
             padding: 1em 1em;
-            transition: ease-in .10s; 
+            transition: ease-in .10s;
 
             // .seeMore-cntr {
             //   &__inner-cntr {
             //     p {
             //       font-size: $fs_l;
-            //     }                
+            //     }
             //   }
             // }
 
@@ -136,7 +190,7 @@
               margin: auto auto;
               display: flex;
               flex-direction: row;
-              color: $clr_l_grey;  
+              color: $clr_l_grey;
 
               .cta-btn-cntr {
                 margin: 0 auto 0 0;
@@ -206,10 +260,10 @@
           overflow: hidden;
           object-position: right;
           object-fit: cover;
-          filter: contrast(1.5) brightness(0.6);   
-          background-position: center;    
+          filter: contrast(1.5) brightness(0.6);
+          background-position: center;
           align-items: center;
-  
+
           video {
             position: absolute;
             height: 110%;
@@ -222,6 +276,15 @@
 
         &__txt-cntr {
           gap: 2em;
+
+          .error-text {
+            width: 80%;
+            padding: 2em 2.5em;
+
+            h1 {
+              font-size: $fs_3xl;
+            }
+          }
 
           &__headline {
             width: 80%;
@@ -256,7 +319,7 @@
                 &__inner-cntr {
                   p {
                     font-size: $fs_l;
-                  }                
+                  }
                 }
               }
 
@@ -264,8 +327,8 @@
                 height: 100%;
                 width: 100%;
                 margin: auto auto;
-                gap: 5em; 
-                color: $clr_l_grey;  
+                gap: 5em;
+                color: $clr_l_grey;
 
                 .cta-btn-cntr {
                   margin: auto auto;
@@ -286,7 +349,7 @@
           }
         }
       }
-    }      
+    }
   }
 }
 
@@ -296,7 +359,7 @@
       .hero-cntr {
         height: 80vh;
       }
-    }      
+    }
   }
 }
 
@@ -309,13 +372,17 @@
         height: 80vh;
 
         &__txt-cntr {
+          .error-text {
+            width: 80%;
+            max-width: 990px;
+          }
           &__headline {
             width: 80%;
             max-width: 990px;
           }
         }
       }
-    }      
+    }
   }
 }
 
@@ -324,7 +391,7 @@
   .hero-wrapper {
     .hero {
       .hero-cntr {
-        &__video-cntr {  
+        &__video-cntr {
           video {
             height: auto;
             width: 100%;
@@ -336,7 +403,7 @@
         }
 
       }
-    }      
+    }
   }
 }
 
@@ -395,7 +462,7 @@
 
         }
       }
-    }      
+    }
   }
 }
 
@@ -403,7 +470,7 @@
   .hero-wrapper.subpagehero-wrapper {
     min-height: auto;
     height: auto;
-    
+
     .hero {
       height: auto;
       .hero-cntr {
@@ -416,7 +483,7 @@
           }
         }
       }
-    }      
+    }
   }
 }
 
@@ -429,8 +496,8 @@
   .hero-cntr.color-hero {
     background-color: $clr_midnight_green;
     color: $clr_lightest_green !important;
-    filter: none !important;    
-    
+    filter: none !important;
+
   }
 }
 
@@ -438,17 +505,23 @@
   .hero-cntr.color-hero {
     background-color: $clr_lightest_green;
     color: $clr_midnight_green !important;
-    filter: none !important;    
+    filter: none !important;
     .hero {
       .hero-cntr {
         &__txt-cntr {
+          .error-text {
+            color: $clr_midnight_green !important;
+            h1 {
+              font-size: $fs_2xl;
+            }
+          }
           &__headline {
             color: $clr_midnight_green !important;
             h1 {
               font-size: $fs_2xl;
             }
           }
-    
+
           &__btm {
             &__text {
               p {
@@ -460,14 +533,14 @@
         &__txt-cntr.subpage-hero-text {
           &__headline {
             color: $clr_midnight_green !important;
-    
+
             h1 {
               font-size: $fs_2-3xl;
               color: $clr_midnight_green !important;
             }
           }
         }
-    
+
       }
     }
   }
@@ -477,7 +550,7 @@
   .hero-cntr.color-hero {
     background-color: $clr_dark-red;
     color: $clr_yellow !important;
-    filter: none !important;    
+    filter: none !important;
   }
 }
 
@@ -485,7 +558,7 @@
   .hero-cntr.color-hero {
     background-color: $clr_m-grey;
     color: $clr_white !important;
-    filter: none !important;    
+    filter: none !important;
   }
 }
 
@@ -493,7 +566,7 @@
 .hero-cntr.color-hero.theme-lightest-green {
   background-color: $clr_midnight_green;
   color: $clr_midnight_green !important;
-  filter: none !important;    
+  filter: none !important;
 }
 
 .hero-wrapper.theme-text-white {
@@ -524,7 +597,7 @@
   .hero-cntr.color-hero {
     background-color: $clr_lightest_green;
     color: $clr_midnight_green !important;
-    filter: none !important;    
+    filter: none !important;
     .hero {
       .hero-cntr {
         &__txt-cntr {
@@ -534,7 +607,7 @@
               font-size: $fs_2xl;
             }
           }
-    
+
           &__btm {
             &__text {
               p {
@@ -546,14 +619,14 @@
         &__txt-cntr.subpage-hero-text {
           &__headline {
             color: $clr_midnight_green !important;
-    
+
             h1 {
               font-size: $fs_2-3xl;
               color: $clr_midnight_green !important;
             }
           }
         }
-    
+
       }
     }
   }

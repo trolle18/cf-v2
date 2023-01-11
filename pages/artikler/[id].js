@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import useSWR from 'swr'
 import Nav from '../../components/Nav/Nav';
+import Link from 'next/link';
+import { AiOutlineArrowLeft } from 'react-icons/ai'
+import Error from '../../components/Error';
 
 // export async function getServerSideProps(context) {
 //   const { id } = context.query;
@@ -77,8 +80,18 @@ export default function ArticlePage () {
     fetcher 
   )
 
-  if (error) return ( <div> <p style={{fontSize: "2rem"}}>{error.message}</p> </div> )
-  if (!data) return <div><p>Loading...</p></div> 
+  if (error) return ( 
+  <div> <p style={{fontSize: "2rem"}}>{error.message}</p> </div>
+  )
+  if (!data) return (
+    <>
+      <Nav/>
+      <Error/>
+    </>
+    // <div><p>Loading...</p></div> 
+  )
+
+
   console.log(data)
 
   if (query.data.id === data.id) { return <p>data</p>}
