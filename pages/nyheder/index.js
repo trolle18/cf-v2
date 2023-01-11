@@ -63,8 +63,6 @@ export default function NewsPage() {
           ))}
 
 
-
-
           {data.articles?.map((data) => (
             <section className="textSection" key={data.id}>
               <div className="textSection__cntr">

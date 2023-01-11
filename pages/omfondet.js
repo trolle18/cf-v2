@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from "framer-motion";
 import NewsletterBlock from '../components/NewsletterBlock'
 import AboutPurposeSection from '../components/AboutPurposeSection';
 import TagHeadlineSubheadline from '../components/TextSectionModules/TagHeadlineSubheadline';
@@ -9,6 +10,8 @@ import BlockGridSection from '../components/BlockGridSection';
 import LoadModal from '../components/LoadModal';
 import Nav from '../components/Nav/Nav';
 import Hero from '../components/Hero';
+import TextCarouselSection from '../components/TextCarouselSection';
+import SeeMoreCtaLink from '../components/SeeMoreCtaLink';
 
 
 export default function AboutPage() {
@@ -32,9 +35,7 @@ export default function AboutPage() {
     <>
       {sectionData.aboutpageData.map((data) => (
         <>
-          {/* {data?.nav.map((data) => (  */}
-            <Nav />
-          {/* ))}   */}
+        <Nav />
 
         <main className="page" key={data.id}>
 
@@ -52,10 +53,18 @@ export default function AboutPage() {
           ))}
 
           {data.txtSliderSection?.map((data) => (
-            <section className="textSection" key={data.id}>
-                  <TagHeadlineSubheadline data={data}/>
+              <section className="textSection" key={data.id}>
+                <TagHeadlineSubheadline data={data}/>
+                <motion.div 
+                className="swiper-cntr swiper-news-cntr"
+                initial={ {opacity: 0} }
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={ {duration: 0.2} }
+                >
                   <SwiperCarousel data={data}/>
-              </section>
+                </motion.div>
+              </section>  
           ))}
 
           {data.txtBevillingSection?.map((data) => (

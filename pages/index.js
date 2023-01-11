@@ -35,11 +35,11 @@ export default function HomePage() {
         ))}
 
         <main className="page" key={data.id}>
-          {/* {data?.hero.map((data) => (
+          {data?.hero.map((data) => (
             <section key={data.id} className="modal-wrapper modal-theme-lightest-green modal-hops-light-green">
               <LoadModal />
             </section>
-          ))}            */}
+          ))}           
 
           {data.hero?.map((data) => (
             <Hero key={data.id}  data={data}/>
