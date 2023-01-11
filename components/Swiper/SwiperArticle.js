@@ -1,5 +1,6 @@
 import Image from "next/image";
 import SeeMoreCtaLink from "../SeeMoreCtaLink";
+import { motion } from "framer-motion";
 
 export default function SwiperArticle ({ data }) {
 
@@ -31,7 +32,14 @@ export default function SwiperArticle ({ data }) {
 
     if (isType.includes("news")) {
       return (
-        <article className="swiper-article swiper-news-article theme-plain" key={data.id}>
+        <motion.article 
+        className="swiper-article swiper-news-article theme-plain" 
+        key={data.id}
+        initial={ {opacity: 0} }
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={ {duration: 0.2} }
+        >
           <div className="swiper-article__img-cntr">
             {data.img.map((img) => (
               <Image key={img.id} src={img.src} alt={img.alt} height={1000} width={1000} />
@@ -47,13 +55,20 @@ export default function SwiperArticle ({ data }) {
               <p className="swiper-article-cont__txt__headline">{data.headline}</p>
             </div>
           </div>
-        </article>
+        </motion.article>
       )
     }
 
     if (isType.includes("podcast")) {
       return (
-        <article className="swiper-article podcast-article" key={data.id}>
+        <motion.article
+        className="swiper-article podcast-article"
+        key={data.id}
+        initial={ {opacity: 0} }
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={ {duration: 0.2} }
+        >
           <div className="img-cntr">
               {data.img.map((img) => (
                 <Image key={img.id} src={img.src} alt={img.alt} height={1000} width={1000} />
@@ -73,13 +88,20 @@ export default function SwiperArticle ({ data }) {
               <SeeMoreCtaLink data={data}/>
             </div>
           </div>
-        </article>
+        </motion.article>
       )
     }
 
     if (isType.includes("video")) {
       return (
-        <article className="swiper-article theme-plain" key={data.id}>
+        <motion.article 
+        className="swiper-article theme-plain" 
+        key={data.id}
+        initial={ {opacity: 0} }
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={ {duration: 0.2} }
+        >
           {getMedia(data)}
 
           <div className="swiper-article-cont">
@@ -92,13 +114,20 @@ export default function SwiperArticle ({ data }) {
               <p className="swiper-article-cont__txt__headline">{data.headline}</p>
             </div>
           </div>
-        </article>
+        </motion.article>
       )
     }
 
     else {
       return (
-        <article className="swiper-article theme-plain" key={data.id}>
+        <motion.article
+        className="swiper-article theme-plain"
+        key={data.id}
+        initial={ {opacity: 0} }
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={ {duration: 0.2} }
+        >
           <div className="swiper-article__img-cntr">
             {data.img.map((img) => (
               <Image key={img.id} src={img.src} alt={img.alt} height={1000} width={1000} />
@@ -114,7 +143,7 @@ export default function SwiperArticle ({ data }) {
               <p className="swiper-article-cont__txt__headline">{data.headline}</p>
             </div>
           </div>
-        </article>
+        </motion.article>
       )
     }
   }

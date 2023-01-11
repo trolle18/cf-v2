@@ -1,11 +1,19 @@
 import Image from "next/image";
 import SeeMoreCtaLink from "./SeeMoreCtaLink";
+import { motion } from "framer-motion";
 
 export default function Article ( {data} ) {
 
     return (
         <>
-            <article className="article" key={data?.id}>
+            <motion.article 
+            className="article" 
+            key={data?.id}
+            initial={ {opacity: 0} }
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={ {duration: 0.2} }
+            >
                 <div className="article-img">
                     <div className="article-img__img-cntr">
                         {data?.img?.map((img) => (
@@ -28,7 +36,7 @@ export default function Article ( {data} ) {
                     </div>
                 </div>
 
-            </article>
+            </motion.article>
         </>
     )
 }

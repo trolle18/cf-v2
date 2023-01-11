@@ -1,12 +1,20 @@
 import Image from "next/image";
 import SeeMoreCtaLink from "../SeeMoreCtaLink";
+import { motion } from "framer-motion";
 
 
 export default function SwiperArticlePodcast ({ data }) {
 
   return (
     <>
-      <article className="swiper-article podcast-article" key={data.id}>
+      <motion.article 
+      className="swiper-article podcast-article"
+      key={data.id}
+      initial={ {opacity: 0} }
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={ {duration: 0.2} }
+      >
         <div className="img-cntr">
           {data.img.map((img) => (
             <Image key={img.id} src={img.src} alt={img.alt} height={600} width={600} />
@@ -27,7 +35,7 @@ export default function SwiperArticlePodcast ({ data }) {
             <SeeMoreCtaLink data={data}/>
           </div>
         </div>
-      </article>
+      </motion.article>
     </>
   )
 }

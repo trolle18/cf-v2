@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 
 export default function SwiperVideoArticle ({ data }) {
@@ -27,7 +28,14 @@ export default function SwiperVideoArticle ({ data }) {
 
   return (
     <>
-      <article className="swiper-article theme-plain" key={data.id}>
+      <motion.article 
+      className="swiper-article theme-plain" 
+      key={data.id}
+      initial={ {opacity: 0} }
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={ {duration: 0.2} }
+      >
         {getMedia(data)}
 
         <div className="swiper-article-cont">
@@ -41,7 +49,7 @@ export default function SwiperVideoArticle ({ data }) {
             <p className="swiper-article-cont__txt__headline">{data.headline}</p>
           </div>
         </div>
-      </article>
+      </motion.article>
     </>
   )
 }
