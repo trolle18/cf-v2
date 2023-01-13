@@ -1,23 +1,44 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import TagHeadlineSubheadline from './TextSectionModules/TagHeadlineSubheadline';
 
 export default function NewsletterBlock({ data }) {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+
+    const user = {
+        "name": name,
+        "email": email,
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        console.log(user)
+        setEmail("")
+        setName("")
+    }
+
 
     return (
-        <>
+    <>
         <section className="textSection" >
             <TagHeadlineSubheadline data={data}/>      
         </section>   
 
         <section className="newsletterBlock" >
             <div  className="newsletterBlock__cntr">
-                <div className="newsletterBlock__cntr__inner-cntr"> 
 
+                <form className="newsletterBlock__cntr__inner-cntr" id="form"> 
                     {data?.inputfields
                     .filter((input) => input.type.includes('name'))
                     .map((input) => (
                         <div key={input.id} className="inputfield">
-                            <input placeholder={input.text} type="text" id="name" name="name"/>
+                            <input 
+                            placeholder={input.text} 
+                            type="text" 
+                            id={input.type}
+                            value={user.name}
+                            onChange={e => setName(e.target.value)}
+                            />
                         </div>
                     ))}
 
@@ -25,23 +46,38 @@ export default function NewsletterBlock({ data }) {
                     .filter((input) => input.type.includes('email'))
                     .map((input) => (
                         <div key={input.id} className="inputfield">
-                            <input placeholder={input.text} type="text" id="email" name="email"/>
+                            <input 
+                            placeholder={input.text} 
+                            type="text" 
+                            id={input.type}
+                            value={user.email}
+                            onChange={e => setEmail(e.target.value)}
+                            />
                         </div>
                     ))}
 
                     <div className="cta-btn-cntr ylw-cta arrow-top-r">
                         {data?.link.map((link) => (
-                            <button className="cta-btn" key={link.id} onClick={console.log("submit")}>
+                            <button 
+                            key={link.id} 
+                            id="submit"
+                            className="cta-btn" 
+                            type="submit"
+                            onClick={handleSubmit}
+                            >
                                 <span className="cta-btn__arrow"></span>
                                 <p className="cta-btn__text">{link.text}</p>
-                                <span className="cta-btn__svg-cntr"><span className="arrow"></span></span>         
+                                <span className="cta-btn__svg-cntr">
+                                    <span className="arrow"></span>
+                                </span>         
                             </button>
                         ))}
                     </div>
 
-                </div>   
+                </form>
+
             </div>         
         </section>        
-        </>
+    </>
     )
 }

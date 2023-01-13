@@ -14,7 +14,7 @@ export default function SeeMoreCtaLink({ data }) {
 
     // Check for arrow, and arrow type, else return null
     function checkArrowType(data) {
-        const isArrow = data.arrow;
+        const isArrow = data?.arrow;
         if (isArrow === "down right") { 
             return (
             <span className="arrow-down-right"></span>
@@ -64,29 +64,42 @@ export default function SeeMoreCtaLink({ data }) {
     }
 
     // Check if showCta = y / n
-    function setCta(data) {
+    function SetCta(data) {
         const isShow = data.showCta;
         if (isShow) {
             return ( 
+                <>
+                {data?.link?.map((data) => ( 
                 <a className="seeMore-cntr__inner-cntr" key={data.id} href={checkUrl(data)}>
                     <div className="arrow-cntr">{checkArrowType(data)}</div>
                     {checkLinkText(data)}
                 </a>
+                 ))}
+                 </>
+
             )
         }
         else if (isShow === "y") {
             return ( 
+                <>
+                {data?.link?.map((data) => ( 
                 <a className="seeMore-cntr__inner-cntr" key={data.id} href={checkUrl(data)}>
                     <div className="arrow-cntr">{checkArrowType(data)}</div>
                     {checkLinkText(data)}
                 </a>
+                 ))}
+                 </>
             )
         } else if (isShow !== "n") {
             return ( 
+                <>
+                {data?.link?.map((data) => ( 
                 <a className="seeMore-cntr__inner-cntr" key={data.id} href={checkUrl(data)}>
                     <div className="arrow-cntr">{checkArrowType(data)}</div>
                     {checkLinkText(data)}
                 </a>
+                 ))}
+                 </>
             )
         } 
         else if (isShow === "n") {
@@ -97,11 +110,6 @@ export default function SeeMoreCtaLink({ data }) {
         }
     }
 
-    return (
-        <>
-        {data?.link?.map((data) => (
-           <>{setCta(data)}</>
-        ))}
-        </>
-    )
+    
+    return ( SetCta(data) )
 }

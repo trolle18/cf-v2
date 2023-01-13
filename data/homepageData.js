@@ -459,7 +459,7 @@ export const homepageData = [
             img: [
               {
                 id: 121213,
-                src: "/data/media/udbredelse.svg",
+                src: "/assets/udbredelse.svg",
                 alt: "Udbredelse svg"
               }
             ]
@@ -471,7 +471,7 @@ export const homepageData = [
             img: [
               {
                 id: 121213,
-                src: "/data/media/støtte.svg",
+                src: "/assets/støtte.svg",
                 alt: "Støtte svg"
               }
             ]

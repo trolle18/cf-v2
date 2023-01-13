@@ -1,8 +1,5 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-// import { useEffect, useState } from 'react';
-
 import { NavLink } from "./NavLink";
-import SearchField from "./SearchField";
+import SearchField from "../SearchField";
 
 export default function NavBurgerMenu({data}) {
   const button = document.getElementById("menu-btn");
@@ -18,7 +15,7 @@ export default function NavBurgerMenu({data}) {
   // Open burger menu
   const openMenu = () => {
     button.classList.toggle("change");
-    
+
     // Toggle classLists of dropdown + nav on button click
     if (dropdown.classList.contains("hidden")) {
       dropdown.classList.remove("hidden");
@@ -31,7 +28,7 @@ export default function NavBurgerMenu({data}) {
     }
 
     // Disable document body scroll, when dropdown is visible
-    if (dropdown.classList.contains("show")) { 
+    if (dropdown.classList.contains("show")) {
       body.classList.add("overflow")
       navOverflow.classList.add("active")
       navOverflow.classList.remove("hidden")
@@ -42,7 +39,7 @@ export default function NavBurgerMenu({data}) {
     }
 
     // Close dropdown menu after link is clicked
-    navLink.forEach(el => el.addEventListener("click", function(e) { 
+    navLink.forEach(el => el.addEventListener("click", function(e) {
       button.classList.toggle("change");
       dropdown.classList.toggle("show");
 
@@ -64,7 +61,7 @@ export default function NavBurgerMenu({data}) {
   //     droplvl2.classList.add("hidden")
   //   }
   // }
-  
+
 
   return (
     <>
@@ -80,34 +77,34 @@ export default function NavBurgerMenu({data}) {
           {data?.navLinks.map((navLink) => (
             <NavLink key={navLink.id} href={navLink.url} className="nav-mob-links__dropdown__links-cntr__link nav-link nav-link-btn" id="nav-link-btn">
               <span className="nav-mob-links__dropdown__links-cntr__link__link-text">
-                <span>{navLink.text}</span>              
+                <span>{navLink.text}</span>
               </span>
             </NavLink>
-          ))}  
+          ))}
         </div>
 
         <div className="nav-mob-links__dropdown__sec-links-cntr">
-          {data?.subLinks.map((link) => ( 
+          {data?.subLinks.map((link) => (
             <NavLink key={link.id} href={link.url} className="nav-mob-links__dropdown__sec-links-cntr__link nav-link">
               <span className="nav-mob-links__dropdown__sec-links-cntr__link__link-text">
                 {link.text}
               </span>
             </NavLink>
-          ))}  
-        </div>            
+          ))}
+        </div>
         <SearchField/>
       </div>
-      
+
       <div className="dropdown-lvl2 hidden" id="dropdown-lvl2">
         <div className="dropdown-lvl2__links-cntr">
-          {data?.navLinks[0].subLvlLinks.map((link) => ( 
+          {data?.navLinks[0].subLvlLinks.map((link) => (
             <NavLink key={link.id} href={link.url} className="dropdown-lvl2__links-cntr__link nav-link">
               <span className="dropdown-lvl2__links-cntr__link__link-text">
-                <span>{link.text}</span>              
+                <span>{link.text}</span>
               </span>
             </NavLink>
-          ))}  
-        </div>        
+          ))}
+        </div>
       </div>
 
     </>

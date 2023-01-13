@@ -1,5 +1,5 @@
 import TagHeadlineSubheadline from './TextSectionModules/TagHeadlineSubheadline';
-import SwiperCarouselPodcasts from './SwiperCarouselPodcasts';
+import SwiperCarouselPodcasts from './Swiper/SwiperCarouselPodcasts';
 import SeeMoreCtaLink from './SeeMoreCtaLink';
 
 export default function PodcastSection({ data }) {

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import SeeMoreCtaLink from './SeeMoreCtaLink';
 
 
@@ -10,18 +11,19 @@ export default function Hero({ data }) {
 
         if (isVideo) { 
             return (
-                <div className="hero-cntr__video-cntr">
-                    {data.video.map((video) => (
+                <div className="hero-cntr__video-cntr">                   
+                     {data.video.map((video) => (
                         <video key={video.id}
-                        // autoPlay
+                        autoPlay
                         muted
                         >
                             <source src={video.src}/>
                         </video>
-                    ))}
+                    ))} 
                     <div className="hero-overlay"></div>
                 </div>
             ) 
+
         } else if (isImg) { 
             const imgSrc = ( data.img.map((img) => (img.src)) )
             const imgStyle = {
@@ -33,14 +35,13 @@ export default function Hero({ data }) {
                 backgroundRepeat: "no-repeat",
             }
             return (
-                <>
                 <div className="hero-cntr__img-cntr">
                     {data.img.map((img) => (
                         <div key={img.id} className="hero-cntr__img-cntr__img" style={ imgStyle }> </div>                
                     ))}
                 </div>
-                </>
             )
+
         } else { 
             return (
                 <div className="hero-cntr__img-cntr color-hero">
@@ -84,19 +85,38 @@ export default function Hero({ data }) {
                 <div className="hero-cntr">
                     {checkMedia(data)}
                     <div className="hero-cntr__txt-cntr">
-                        <div className="hero-cntr__txt-cntr__headline">
+                        <motion.div 
+                        className="hero-cntr__txt-cntr__headline"
+                        animate={ {opacity: 1} }
+                        initial={ {opacity: 0} }
+                        exit={ {opacity: 0} }
+                        transition={ {duration: 0.8} }
+                        >
                             <h1>{data.headline}</h1>
-                        </div>
+                        </motion.div>
 
                         <div className="hero-cntr__txt-cntr__btm">
-                            <div className="hero-cntr__txt-cntr__btm__text">
-                                <p>{data.text}</p>
+                            <div  className="hero-cntr__txt-cntr__btm__text">
+                                <motion.p
+                                animate={ {opacity: 1} }
+                                initial={ {opacity: 0} }
+                                exit={ {opacity: 0} }
+                                transition={ {duration: 0.8} }
+                                >
+                                    {data.text}
+                                </motion.p>
                             </div>
 
                             <div className="hero-cntr__txt-cntr__btm__cta">
-                                <div className="seeMore-cntr theme-cta-white seeMore-cntr-trimspace-center" >
+                                <motion.div
+                                className="seeMore-cntr theme-cta-white seeMore-cntr-trimspace-center"
+                                animate={ {opacity: 1} }
+                                initial={ {opacity: 0} }
+                                exit={ {opacity: 0} }
+                                transition={ {duration: 0.8} }
+                                >
                                     <SeeMoreCtaLink data={data} />
-                                </div>
+                                </motion.div>
                             </div>
                         </div>   
 
